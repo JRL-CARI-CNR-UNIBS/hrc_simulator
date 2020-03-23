@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: hrc_simulator_descriptions
+    relative_path: urdf/hrc_simulator.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/hrc_simulator.srdf
+  CONFIG:
+    author_name: Manuel Beschi
+    author_email: manuel.beschi@stiima.cnr.it
+    generated_timestamp: 1584964614

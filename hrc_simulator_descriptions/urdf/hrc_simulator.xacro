@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="hrc_simulator" >
+
+
+<xacro:include filename="$(find stiima_lab_descriptions)/urdf/conveyor_system.urdf.xacro" />
+<xacro:conveyor_system/>
+
+<xacro:include filename="$(find stiima_lab_descriptions)/urdf/shopdesk_dim.urdf.xacro" />
+<xacro:shopdesk/>
+
+<xacro:include filename="$(find stiima_lab_descriptions)/urdf/elmo_linear_guide.urdf.xacro" />
+<xacro:elmo_linear_guide/>
+
+<xacro:include filename="$(find stiima_lab_descriptions)/urdf/wheeled_table_dim.urdf.xacro" />
+<xacro:wheeled_table_dim/>
+
+<xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
+
+<xacro:ur5_robot prefix="ur5_" joint_limited="true"/>
+<joint name="ur5_joint" type="fixed">
+  <parent link="elmo_linear_guide_cursor" />
+  <child  link = "ur5_base_link" />
+  <origin xyz="0.02    0.02   0" rpy="0 0 ${0*pi-0.2}" />
+</joint>
+
+
+<xacro:include filename="$(find stiima_lab_descriptions)/urdf/human14dof/human14dof.urdf.xacro"/>
+<xacro:human14dof/>
+
+<joint name="human_fixed_joint" type="fixed">
+  <parent link="world" />
+  <child  link = "origin_human14dof" />
+  <origin xyz="1 1 0.0" rpy="0 0 ${-0.5*pi}" />
+</joint>
+
+
+<link name="tip">
+<collision>
+  <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+  <geometry>
+    <cylinder radius="0.03" length="0.15"/>
+  </geometry>
+</collision>
+<visual>
+  <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+  <geometry>
+    <cylinder radius="0.03" length="0.15"/>
+  </geometry>
+  <material name="grey">
+       <color rgba="0.8 0.8 0.8 1.0"/>
+  </material>
+</visual>
+</link>
+
+<joint name="tip_joint" type="fixed">
+  <parent link="ur5_tool0" />
+  <child  link = "tip" />
+  <origin xyz="0 0 0.15" rpy="0 0 0" />
+</joint>
+
+
+
+
+<link name="world" />
+
+
+
+
+<joint name="conveyor_system_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "conveyor_system" />
+<origin xyz="-0.92 -0.05 0.99" rpy="0.0 0.0 0.02" />
+</joint>
+
+
+<joint name="shopdesk_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "shopdesk" />
+<origin xyz="1 -0.95 0.94" rpy="0.0 0.0 ${-0.0*pi}" />
+</joint>
+
+<joint name="elmo_linear_guide_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "elmo_linear_guide_stator" />
+  <origin xyz="0.090 -0.32 0.95" rpy="0 0 0.005" />
+</joint>
+
+
+<joint name="tabletop_fixed" type="fixed">
+  <parent link = "world" />
+  <child  link = "tabletop" />
+  <origin xyz="1.73 1.72 1.04" rpy="0 0 ${-0.5*pi}" />
+</joint>
+
+<link name="floor">
+  <collision>
+    <origin  xyz="0.0 0.0 -0.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 8 1.0"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="floor_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "floor" />
+<origin xyz="2 2 1.0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall1">
+  <collision>
+    <origin  xyz="0.0 0.5 1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 1 1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall1_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall1" />
+<origin xyz="2 3.5 0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall2">
+  <collision>
+    <origin  xyz="0.0 -0.5 1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="8 1 1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall2_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall2" />
+<origin xyz="2 -1 0" rpy="0 0 0.0" />
+</joint>
+
+
+<link name="wall3">
+  <collision>
+    <origin  xyz="-0.5 0.0  1.5" rpy="0 0 0" />
+    <geometry>
+      <box size="1 8  1.5"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="wall3_joint" type="fixed">
+  <parent link = "world" />
+  <child  link = "wall3" />
+<origin xyz="-0.3 2 0" rpy="0 0 0.0" />
+</joint>
+
+
+
+
+<gazebo reference="world">
+    <static>true</static>
+</gazebo>
+<gazebo reference="shopdesk">
+    <static>true</static>
+</gazebo>
+<gazebo reference="conveyor_system">
+    <static>true</static>
+</gazebo>
+<gazebo reference="tabletop">
+    <static>true</static>
+</gazebo>
+<gazebo reference="table">
+    <static>true</static>
+</gazebo>
+
+<gazebo reference="ur10_wrist_3_joint">>
+ <provideFeedback>true</provideFeedback>
+</gazebo>
+
+<gazebo>
+  <plugin name="ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/gazebo</robotNamespace>
+    <controlPeriod>0.001</controlPeriod>
+  </plugin>
+  <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+      <updateRate>100.0</updateRate>
+      <topicName>ft_sensor_topic</topicName>
+      <jointName>ur10_wrist_3_joint</jointName>
+  </plugin>
+</gazebo>
+
+
+
+
+</robot>

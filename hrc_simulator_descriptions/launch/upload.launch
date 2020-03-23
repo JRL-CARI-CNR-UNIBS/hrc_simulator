@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find hrc_simulator_descriptions)/urdf/hrc_simulator.xacro'" />
+</launch>
