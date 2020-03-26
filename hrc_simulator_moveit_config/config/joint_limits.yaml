@@ -12,11 +12,6 @@ joint_limits:
     max_velocity: 10
     has_acceleration_limits: false
     max_acceleration: 0
-  Belly_rotz:
-    has_velocity_limits: true
-    max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
   jLeftElbow_rotz:
     has_velocity_limits: true
     max_velocity: 10
@@ -53,6 +48,21 @@ joint_limits:
     has_acceleration_limits: false
     max_acceleration: 0
   jRightShoulder_rotz:
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: false
+    max_acceleration: 0
+  jRightWristPitch:
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: false
+    max_acceleration: 0
+  jRightWristRoll:
+    has_velocity_limits: true
+    max_velocity: 10
+    has_acceleration_limits: false
+    max_acceleration: 0
+  jRightWristYaw:
     has_velocity_limits: true
     max_velocity: 10
     has_acceleration_limits: false

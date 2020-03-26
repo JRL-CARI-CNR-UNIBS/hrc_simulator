@@ -13,19 +13,20 @@ controller_list:
       - joint_traslx
       - joint_trasly
       - joint_orientation
-      - Belly_rotz
       - Belly_rotx
       - Belly_roty
       - jRightShoulder_rotx
       - jRightShoulder_roty
       - jRightShoulder_rotz
       - jRightElbow_rotz
+      - jRightWristRoll
+      - jRightWristPitch
+      - jRightWristYaw
   - name: fake_human_left_arm_controller
     joints:
       - joint_traslx
       - joint_trasly
       - joint_orientation
-      - Belly_rotz
       - Belly_rotx
       - Belly_roty
       - jLeftShoulder_rotx
