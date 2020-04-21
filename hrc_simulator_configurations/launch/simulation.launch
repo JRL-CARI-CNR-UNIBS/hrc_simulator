@@ -1,0 +1,23 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"> 
+    <param name="num_worker_threads" value="20" />
+  </node>
+  <arg name="gui" default="false"/>
+  
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/fake_hw.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/planner_hw.yaml" />
+<!--<rosparam command="load" file="$(find dimostratore_configurations)/config/planner_topics_hw.yaml" />-->
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+      <param name="/use_gui" value="false"/>
+      <rosparam param="/source_list">[/ur5/joint_states,/elmo/joint_states,/mao/joint_states]</rosparam>
+    </node>
+<!--  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />-->
+
+<node pkg="itia_configuration_manager" type="configuration_manager" name="controller_manager" output="screen"/>
+<node pkg="itia_configuration_manager" type="dispatcher" name="dispatcher" output="screen"/>
+  
+
+  
+</launch>

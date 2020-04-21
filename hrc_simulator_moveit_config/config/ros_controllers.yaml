@@ -1,45 +1,5 @@
-# MoveIt-specific simulation settings
-moveit_sim_hw_interface:
-  joint_model_group: controllers_initial_group_
-  joint_model_group_pose: controllers_initial_pose_
-# Settings for ros_control control loop
-generic_hw_control_loop:
-  loop_hz: 300
-  cycle_time_error_threshold: 0.01
-# Settings for ros_control hardware interface
-hardware_interface:
-  joints:
-    - linear_motor_cursor_joint
-    - ur5_shoulder_pan_joint
-    - ur5_shoulder_lift_joint
-    - ur5_elbow_joint
-    - ur5_wrist_1_joint
-    - ur5_wrist_2_joint
-    - ur5_wrist_3_joint
-    - joint_traslx
-    - joint_trasly
-    - joint_orientation
-    - Belly_rotx
-    - Belly_roty
-    - jLeftShoulder_rotx
-    - jLeftShoulder_roty
-    - jLeftShoulder_rotz
-    - jLeftElbow_rotz
-    - jRightShoulder_rotx
-    - jRightShoulder_roty
-    - jRightShoulder_rotz
-    - jRightElbow_rotz
-    - jRightWristRoll
-    - jRightWristPitch
-    - jRightWristYaw
-  sim_control_mode: 1  # 0: position, 1: velocity
-# Publish all joint states
-# Creates the /joint_states topic necessary in ROS
-joint_state_controller:
-  type: joint_state_controller/JointStateController
-  publish_rate: 50
 controller_list:
-  - name: ur5_on_guide_controller
+  - name: ur5_on_guide
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
@@ -51,33 +11,31 @@ controller_list:
       - ur5_wrist_1_joint
       - ur5_wrist_2_joint
       - ur5_wrist_3_joint
-  - name: human_right_arm_controller
+  - name: human_right_arm
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
-      - joint_traslx
-      - joint_trasly
-      - joint_orientation
-      - Belly_rotz
-      - Belly_rotx
-      - Belly_roty
-      - jRightShoulder_rotx
-      - jRightShoulder_roty
-      - jRightShoulder_rotz
-      - jRightElbow_rotz
-  - name: human_left_arm_controller
+    - joint_traslx
+    - joint_trasly
+    - joint_orientation
+    - Belly_rotx
+    - Belly_roty
+    - jRightShoulder_rotx
+    - jRightShoulder_roty
+    - jRightShoulder_rotz
+    - jRightElbow_roty
+    - jRightElbow_rotz
+    - jRightWristRoll
+    - jRightWristPitch
+    - jRightWristYaw
+  - name: human_left_arm
     action_ns: follow_joint_trajectory
     default: True
     type: FollowJointTrajectory
     joints:
-      - joint_traslx
-      - joint_trasly
-      - joint_orientation
-      - Belly_rotz
-      - Belly_rotx
-      - Belly_roty
-      - jLeftShoulder_rotx
-      - jLeftShoulder_roty
-      - jLeftShoulder_rotz
-      - jLeftElbow_rotz
+    - jLeftShoulder_rotx
+    - jLeftShoulder_roty
+    - jLeftShoulder_rotz
+    - jLeftElbow_rotz
+

@@ -1,0 +1,98 @@
+start_log: true
+
+binary_logger:
+  num_worker_threads: 10
+  # test_path: is the path where the binary file will be saved (if empty the destination directory will be '/home/user/.ros' )
+  test_path: ""
+  
+  # test_name: is the name of the test. The final file name will be [test_name]_[topic_type]_[topic_name].bin
+  # NOTE '/' will be substitute with '_'
+  test_name: "test_movement"
+#  test_name: "velocity_standard"
+#  test_name: "proto5_motor_ident_M4_jnt1_trial_1_acc_vel_ratio_2"
+#  test_name: "proto5_load_ident_M6_trial_1"
+#  test_name: "proto5_spring1_ident"
+
+  
+  # manager_name: name of the nodlet manager (need to be equal to the name in the launch file)
+  manager_name: 'binary_logger'
+
+  # list of nodelet (unrelated to binary_logger package) that the user do not want to stop
+  unstoppable_nodelets: []
+  
+  # Type of the topic that need to be logged (supported JointState, Imu, PoseStamped, WrenchStamped, Float64MultiArray)
+  topic_type: 
+  - 'JointState'
+  - 'Float64'
+
+  JointState:
+    # List of the topic to be acquired 
+    topic_names:
+    - '/joint_states'
+    - '/ur5/joint_pos_target'
+    - '/clearance_hw/ur5_task_cartesian_scaling_tff/joint_nominal_trj'
+    - '/clearance_hw/ur5_task_cartesian_scaling_ttt/joint_nominal_trj'
+    - '/clearance_hw/ur5_task_cartesian_scaling_fff/joint_nominal_trj'
+    - '/clearance_hw/ur5_task_cartesian_scaling_ftt/joint_nominal_trj'
+    - '/clearance_hw/ur5_task_clearance_scaling/joint_nominal_trj'
+
+    # Acquisition time (to be specified for each topic)
+    duration:
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+
+    # Message decimation (to be specified for each topic)
+    decimation:
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+
+
+  Float64:
+    # List of the topic to be acquired
+    topic_names:
+    - '/clearance_hw/ur5_task_cartesian_scaling_tff/scaling'
+    - '/clearance_hw/ur5_task_cartesian_scaling_ttt/scaling'
+    - '/clearance_hw/ur5_task_cartesian_scaling_fff/scaling'
+    - '/clearance_hw/ur5_task_cartesian_scaling_ftt/scaling'
+    - '/clearance_hw/ur5_task_clearance_scaling/scaling'
+    - '/distance'
+
+    # Acquisition time (to be specified for each topic)
+    duration:
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+      - 400 #[s]
+
+    # Message decimation (to be specified for each topic)
+    decimation:
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1
+      - 1

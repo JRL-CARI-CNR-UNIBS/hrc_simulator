@@ -198,3 +198,5 @@ human_left_arm:
     - LazyPRMstar
     - SPARS
     - SPARStwo
+  projection_evaluator: joints(jLeftShoulder_rotx,jLeftShoulder_roty)
+  longest_valid_segment_fraction: 0.005

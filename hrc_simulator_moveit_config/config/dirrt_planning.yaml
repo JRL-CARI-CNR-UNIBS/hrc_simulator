@@ -1,0 +1,13 @@
+group_names_map:
+  #ur10: dgaco
+  #ur5_on_guide: dgaco5
+  dirrt10: human_right_arm
+  dirrt5: ur5_on_guide
+  #human_aware: ur10
+
+
+
+dirrt10:
+  max_rrt_iteration: 10
+dgaco5:
+  max_rrt_iteration: 10

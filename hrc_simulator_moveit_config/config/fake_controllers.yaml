@@ -24,11 +24,6 @@ controller_list:
       - jRightWristYaw
   - name: fake_human_left_arm_controller
     joints:
-      - joint_traslx
-      - joint_trasly
-      - joint_orientation
-      - Belly_rotx
-      - Belly_roty
       - jLeftShoulder_rotx
       - jLeftShoulder_roty
       - jLeftShoulder_rotz

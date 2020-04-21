@@ -1,0 +1,53 @@
+control_configurations:
+- name: "warmup1"
+  components:
+  - {hardware_interface: "mao_hw", controller: "js_pub", description: ""}
+- name: "warmup2"
+  components:
+  - {hardware_interface: "mao_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "js_pub", description: ""}
+- name: "watch"
+  components:
+  - {hardware_interface: "mao_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "coe_hw", controller: "js_pub", description: ""}
+- name: "thor"
+  components:
+  - {hardware_interface: "mao_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl1", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl2", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl3", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl4", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl5", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl6", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl7", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl8", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl9", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl10", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl11", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl12", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl13", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl14", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl15", description: ""}
+  - {hardware_interface: "mao_hw", controller: "ctrl16", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt1", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt2", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt3", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt4", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt5", description: ""}
+  - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt6", description: ""}
+  - {hardware_interface: "coe_hw", controller: "js_pub", description: ""}
+  - {hardware_interface: "coe_hw", controller: "linkpos_to_vel_jnt0", description: ""}
+  - {hardware_interface: "planner_hw", controller: "ur5_thor_prefilter_planner", description: ""}
+  - {hardware_interface: "planner_hw", controller: "human_right_arm_thor_prefilter_planner", description: ""}
+  - {hardware_interface: "planner_hw", controller: "human_left_arm_thor_prefilter_planner", description: ""}
+
+
+start_gazebo: false
+gazebo_bringup_time: 0
+configuration_dispatches:
+  warmup1: 0.1
+  warmup2: 0.2
+  watch: 0.3
+  thor: 1.0

@@ -41,13 +41,6 @@
         <joint name="jRightTip" />
     </group>
     <group name="human_left_arm">
-        <joint name="human_fixed_joint" />
-        <joint name="joint_traslx" />
-        <joint name="joint_trasly" />
-        <joint name="joint_orientation" />
-        <joint name="Belly_rotx" />
-        <joint name="Belly_roty" />
-        <joint name="Belly_Chest" />
         <joint name="jLeftShoulder_rotx" />
         <joint name="jLeftShoulder_roty" />
         <joint name="jLeftShoulder_rotz" />
@@ -75,8 +68,8 @@
         <joint name="ur5_wrist_3_joint" value="0" />
     </group_state>
     <group_state name="r_home" group="human_right_arm">
-        <joint name="Belly_roty" value="0" />
         <joint name="Belly_rotx" value="0" />
+        <joint name="Belly_roty" value="0" />
         <joint name="jRightElbow_rotz" value="0.8765" />
         <joint name="jRightShoulder_rotx" value="0.0087" />
         <joint name="jRightShoulder_roty" value="0.3385" />
@@ -89,15 +82,10 @@
         <joint name="joint_trasly" value="0" />
     </group_state>
     <group_state name="left_home" group="human_left_arm">
-        <joint name="Belly_roty" value="0" />
-        <joint name="Belly_rotx" value="0" />
         <joint name="jLeftElbow_rotz" value="0" />
         <joint name="jLeftShoulder_rotx" value="-1.2757" />
         <joint name="jLeftShoulder_roty" value="0" />
         <joint name="jLeftShoulder_rotz" value="0" />
-        <joint name="joint_orientation" value="0" />
-        <joint name="joint_traslx" value="0.0552" />
-        <joint name="joint_trasly" value="0" />
     </group_state>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="Belly" link2="Chest" reason="Adjacent" />
@@ -106,6 +94,7 @@
     <disable_collisions link1="Belly" link2="Pelvis" reason="Adjacent" />
     <disable_collisions link1="Belly" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="Belly" link2="floor" reason="Default" />
+    <disable_collisions link1="Belly" link2="shopdesk" reason="User" />
     <disable_collisions link1="Belly" link2="ur5_ee_link" reason="Never" />
     <disable_collisions link1="Belly" link2="ur5_wrist_2_link" reason="Never" />
     <disable_collisions link1="Belly" link2="ur5_wrist_3_link" reason="Never" />
@@ -115,6 +104,7 @@
     <disable_collisions link1="Chest" link2="Pelvis" reason="Never" />
     <disable_collisions link1="Chest" link2="RightUpperArm" reason="Adjacent" />
     <disable_collisions link1="Chest" link2="floor" reason="User" />
+    <disable_collisions link1="Chest" link2="shopdesk" reason="User" />
     <disable_collisions link1="Chest" link2="ur5_wrist_1_link" reason="Never" />
     <disable_collisions link1="Head" link2="LeftHand" reason="Never" />
     <disable_collisions link1="Head" link2="Neck" reason="Adjacent" />
@@ -122,6 +112,7 @@
     <disable_collisions link1="Head" link2="RightHand" reason="Never" />
     <disable_collisions link1="Head" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="Head" link2="floor" reason="User" />
+    <disable_collisions link1="Head" link2="shopdesk" reason="User" />
     <disable_collisions link1="Head" link2="tip" reason="Never" />
     <disable_collisions link1="Head" link2="ur5_base_link" reason="Never" />
     <disable_collisions link1="Head" link2="ur5_ee_link" reason="Never" />
@@ -134,6 +125,7 @@
     <disable_collisions link1="LeftForeArm" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="LeftForeArm" link2="elmo_linear_guide_cursor" reason="Never" />
     <disable_collisions link1="LeftForeArm" link2="floor" reason="User" />
+    <disable_collisions link1="LeftForeArm" link2="shopdesk" reason="User" />
     <disable_collisions link1="LeftForeArm" link2="tip" reason="Never" />
     <disable_collisions link1="LeftForeArm" link2="ur5_base_link" reason="Never" />
     <disable_collisions link1="LeftForeArm" link2="ur5_ee_link" reason="Never" />
@@ -146,6 +138,7 @@
     <disable_collisions link1="LeftHand" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="LeftHand" link2="elmo_linear_guide_cursor" reason="Never" />
     <disable_collisions link1="LeftHand" link2="floor" reason="User" />
+    <disable_collisions link1="LeftHand" link2="shopdesk" reason="User" />
     <disable_collisions link1="LeftHand" link2="tip" reason="Never" />
     <disable_collisions link1="LeftHand" link2="ur5_base_link" reason="Never" />
     <disable_collisions link1="LeftHand" link2="ur5_ee_link" reason="Never" />
@@ -158,6 +151,7 @@
     <disable_collisions link1="LeftUpperArm" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="LeftUpperArm" link2="elmo_linear_guide_cursor" reason="Never" />
     <disable_collisions link1="LeftUpperArm" link2="floor" reason="User" />
+    <disable_collisions link1="LeftUpperArm" link2="shopdesk" reason="User" />
     <disable_collisions link1="LeftUpperArm" link2="tip" reason="Never" />
     <disable_collisions link1="LeftUpperArm" link2="ur5_base_link" reason="Never" />
     <disable_collisions link1="LeftUpperArm" link2="ur5_ee_link" reason="Never" />
@@ -198,6 +192,7 @@
     <disable_collisions link1="RightForeArm" link2="RightHand" reason="Adjacent" />
     <disable_collisions link1="RightForeArm" link2="RightUpperArm" reason="Adjacent" />
     <disable_collisions link1="RightForeArm" link2="floor" reason="User" />
+    <disable_collisions link1="RightForeArm" link2="shopdesk" reason="User" />
     <disable_collisions link1="RightForeArm" link2="tip" reason="Never" />
     <disable_collisions link1="RightForeArm" link2="ur5_base_link" reason="Never" />
     <disable_collisions link1="RightForeArm" link2="ur5_ee_link" reason="Never" />
@@ -208,6 +203,7 @@
     <disable_collisions link1="RightHand" link2="RightUpperArm" reason="Never" />
     <disable_collisions link1="RightHand" link2="elmo_linear_guide_cursor" reason="Never" />
     <disable_collisions link1="RightHand" link2="floor" reason="User" />
+    <disable_collisions link1="RightHand" link2="shopdesk" reason="User" />
     <disable_collisions link1="RightHand" link2="tabletop" reason="Never" />
     <disable_collisions link1="RightHand" link2="tip" reason="Never" />
     <disable_collisions link1="RightHand" link2="ur5_base_link" reason="Never" />
@@ -217,6 +213,7 @@
     <disable_collisions link1="RightHand" link2="ur5_upper_arm_link" reason="Never" />
     <disable_collisions link1="RightUpperArm" link2="elmo_linear_guide_cursor" reason="Never" />
     <disable_collisions link1="RightUpperArm" link2="floor" reason="User" />
+    <disable_collisions link1="RightUpperArm" link2="shopdesk" reason="User" />
     <disable_collisions link1="RightUpperArm" link2="tabletop" reason="Never" />
     <disable_collisions link1="RightUpperArm" link2="tip" reason="Never" />
     <disable_collisions link1="RightUpperArm" link2="ur5_base_link" reason="Never" />
