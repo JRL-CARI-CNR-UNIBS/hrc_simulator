@@ -101,10 +101,10 @@ planner_hw:
     - /mao_ovr2
 
     controlled_joint:
-    - Belly_rotx
-    - Belly_roty
     - joint_traslx
     - joint_trasly
+    - Belly_rotx
+    - Belly_roty
     - joint_orientation
     - jRightShoulder_rotx
     - jRightShoulder_roty
