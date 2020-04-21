@@ -10,6 +10,7 @@
 
   <!-- By default, we are not in debug mode -->
   <arg name="debug" default="false" />
+  <arg name="safety" default="fixed_area" />
 
   <!--
   By default, hide joint_state_publisher's GUI
@@ -53,6 +54,8 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
   <include file="$(find hrc_simulator_configurations)/launch/simulation.launch"/>
+
+  <include file="$(find hrc_simulator_configurations)/launch/$(arg safety)_safety.launch"/>
 
   <!-- If database loading was enabled, start mongodb as well -->
   <include file="$(find hrc_simulator_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)">
