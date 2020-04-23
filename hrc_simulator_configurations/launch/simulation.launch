@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+
 <launch>
   <node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"> 
     <param name="num_worker_threads" value="20" />
@@ -7,6 +9,7 @@
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/fake_hw.yaml" />
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/planner_hw.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/clearance_controllers.yaml" />
 <!--<rosparam command="load" file="$(find dimostratore_configurations)/config/planner_topics_hw.yaml" />-->
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
