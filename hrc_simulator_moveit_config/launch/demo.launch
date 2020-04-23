@@ -56,4 +56,7 @@
     <arg name="moveit_warehouse_database_path" value="$(arg db_path)"/>
   </include>
 
+
+<param name="move_group/trajectory_execution/allowed_execution_duration_scaling" value="4.0" />
+<param name="move_group/trajectory_execution/execution_duration_monitoring" value="false" />
 </launch>
