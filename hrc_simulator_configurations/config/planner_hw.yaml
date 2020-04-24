@@ -58,6 +58,18 @@ planner_hw:
   - "/planner_hw/human_torso_thor_prefilter_planner/follow_joint_trajectory/result"
   - "/planner_hw/human_torso_thor_prefilter_planner/follow_joint_trajectory/status"
 
+  - "/planner_hw/ur5_task_joint_scaling/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_task_joint_scaling/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_task_joint_scaling/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_task_joint_scaling/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_task_joint_scaling/follow_joint_trajectory/status"
+
+  - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/status"
+
   remap_target_args:
   - "/ur5_on_guide/follow_joint_trajectory/cancel"
   - "/ur5_on_guide/follow_joint_trajectory/feedback"
@@ -82,6 +94,18 @@ planner_hw:
   - "/human_torso/follow_joint_trajectory/goal"
   - "/human_torso/follow_joint_trajectory/result"
   - "/human_torso/follow_joint_trajectory/status"
+
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
+
+  - "/human_right_arm/follow_joint_trajectory/cancel"
+  - "/human_right_arm/follow_joint_trajectory/feedback"
+  - "/human_right_arm/follow_joint_trajectory/goal"
+  - "/human_right_arm/follow_joint_trajectory/result"
+  - "/human_right_arm/follow_joint_trajectory/status"
 
   ur5_thor_prefilter_planner:
     type: "thor/PrefilterPosVelEffController"
@@ -132,3 +156,38 @@ planner_hw:
     - joint_trasly
     - joint_orientation
     spline_order: 1
+
+  ur5_task_joint_scaling:
+    type: "taskQP/TaskBasedPosController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+
+  ur5_task_joint_ssm:
+    type: "taskQP/TaskJointSSMPosVelEffController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+    base_frame: "world"
+    tool_frame: "ur5_tool0"
+    elbow_frame: "ur5_forearm_link"

@@ -29,26 +29,10 @@ binary_logger:
     # List of the topic to be acquired 
     topic_names:
     - '/joint_states'
-    - '/ur5/joint_pos_target'
-    - '/clearance_hw/ur5_task_cartesian_scaling_tff/joint_nominal_trj'
-    - '/clearance_hw/ur5_task_cartesian_scaling_ttt/joint_nominal_trj'
-    - '/clearance_hw/ur5_task_cartesian_scaling_fff/joint_nominal_trj'
-    - '/clearance_hw/ur5_task_cartesian_scaling_ftt/joint_nominal_trj'
-    - '/clearance_hw/ur5_task_clearance_scaling/joint_nominal_trj'
+    - '/joint_pos_target'
 
     # Acquisition time (to be specified for each topic)
     duration:
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
       - 400 #[s]
       - 400 #[s]
 
@@ -56,28 +40,18 @@ binary_logger:
     decimation:
       - 1
       - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
-      - 1
 
 
   Float64:
     # List of the topic to be acquired
     topic_names:
-    - '/clearance_hw/ur5_task_cartesian_scaling_tff/scaling'
-    - '/clearance_hw/ur5_task_cartesian_scaling_ttt/scaling'
-    - '/clearance_hw/ur5_task_cartesian_scaling_fff/scaling'
-    - '/clearance_hw/ur5_task_cartesian_scaling_ftt/scaling'
-    - '/clearance_hw/ur5_task_clearance_scaling/scaling'
+    - '/planner_hw/ur5_task_joint_scaling/scaling'
+    - '/planner_hw/ur5_task_joint_ssm/scaling'
     - '/distance'
+    - '/distance_in_motion'
+    - '/safe_ovr_1'
+    - '/task_interface_robot/idle_time'
+    - '/task_interface_human/idle_time'
 
     # Acquisition time (to be specified for each topic)
     duration:
@@ -87,6 +61,7 @@ binary_logger:
       - 400 #[s]
       - 400 #[s]
       - 400 #[s]
+
 
     # Message decimation (to be specified for each topic)
     decimation:

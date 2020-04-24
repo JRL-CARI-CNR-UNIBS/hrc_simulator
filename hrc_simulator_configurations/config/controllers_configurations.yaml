@@ -71,7 +71,7 @@ control_configurations:
   - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt6", description: ""}
   - {hardware_interface: "coe_hw", controller: "js_pub", description: ""}
   - {hardware_interface: "coe_hw", controller: "linkpos_to_vel_jnt0", description: ""}
-  - {hardware_interface: "clearance_hw", controller: "ur5_task_joint_scaling", description: ""}
+  - {hardware_interface: "planner_hw", controller: "ur5_task_joint_scaling", description: ""}
   - {hardware_interface: "planner_hw", controller: "human_right_arm_thor_prefilter_planner", description: ""}
   - {hardware_interface: "planner_hw", controller: "human_left_arm_thor_prefilter_planner", description: ""}
 
@@ -135,7 +135,7 @@ control_configurations:
   - {hardware_interface: "ur5_hw", controller: "linkpos_to_vel_jnt6", description: ""}
   - {hardware_interface: "coe_hw", controller: "js_pub", description: ""}
   - {hardware_interface: "coe_hw", controller: "linkpos_to_vel_jnt0", description: ""}
-  - {hardware_interface: "clearance_hw", controller: "ur5_task_joint_ssm", description: ""}
+  - {hardware_interface: "planner_hw", controller: "ur5_task_joint_ssm", description: ""}
   - {hardware_interface: "planner_hw", controller: "human_right_arm_thor_prefilter_planner", description: ""}
   - {hardware_interface: "planner_hw", controller: "human_left_arm_thor_prefilter_planner", description: ""}
 
