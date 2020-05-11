@@ -24,6 +24,7 @@ binary_logger:
   topic_type: 
   - 'JointState'
   - 'Float64'
+ # - 'Int64'
 
   JointState:
     # List of the topic to be acquired 
@@ -33,8 +34,8 @@ binary_logger:
 
     # Acquisition time (to be specified for each topic)
     duration:
-      - 400 #[s]
-      - 400 #[s]
+      - 1000 #[s]
+      - 1000 #[s]
 
     # Message decimation (to be specified for each topic)
     decimation:
@@ -49,19 +50,17 @@ binary_logger:
     - '/planner_hw/ur5_task_joint_ssm/scaling'
     - '/distance'
     - '/distance_in_motion'
-    - '/safe_ovr_1'
     - '/task_interface_robot/idle_time'
     - '/task_interface_human/idle_time'
 
     # Acquisition time (to be specified for each topic)
     duration:
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-      - 400 #[s]
-
+      - 1000 #[s]
+      - 1000 #[s]
+      - 1000 #[s]
+      - 1000 #[s]
+      - 1000 #[s]
+      - 1000 #[s]
 
     # Message decimation (to be specified for each topic)
     decimation:
@@ -71,3 +70,4 @@ binary_logger:
       - 1
       - 1
       - 1
+

@@ -174,7 +174,7 @@ planner_hw:
     clik_gain: 100
 
   ur5_task_joint_ssm:
-    type: "taskQP/TaskJointSSMPosVelEffController"
+    type: "taskQP/TaskJointSSMPosController"
     controlled_joint:
     - linear_motor_cursor_joint
     - ur5_shoulder_pan_joint

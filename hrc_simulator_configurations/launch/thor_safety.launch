@@ -1,0 +1,6 @@
+<launch>
+
+  <rosparam file="$(find hrc_simulator_configurations)/config/thor_safety.yaml" command="load"/>
+  <node pkg="fake_people_detection" name="fake_people_detection" type="node" output="screen" />
+
+</launch>
