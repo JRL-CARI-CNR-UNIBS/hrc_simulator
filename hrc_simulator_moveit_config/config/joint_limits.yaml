@@ -69,24 +69,24 @@ joint_limits:
     max_acceleration: 0
   joint_orientation:
     has_velocity_limits: true
-    max_velocity: 10
+    max_velocity: 2
     has_acceleration_limits: false
     max_acceleration: 0
   joint_traslx:
     has_velocity_limits: true
-    max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    max_velocity: 1
+    has_acceleration_limits: true
+    max_acceleration: 2
   joint_trasly:
     has_velocity_limits: true
-    max_velocity: 2
-    has_acceleration_limits: false
-    max_acceleration: 0
+    max_velocity: 1
+    has_acceleration_limits: true
+    max_acceleration: 2
   linear_motor_cursor_joint:
     has_velocity_limits: true
     max_velocity: 1
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 2
   ur5_elbow_joint:
     has_velocity_limits: true
     max_velocity: 3.15
