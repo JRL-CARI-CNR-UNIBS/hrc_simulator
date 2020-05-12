@@ -71,3 +71,16 @@ binary_logger:
       - 1
       - 1
 
+  Int64:
+    # List of the topic to be acquired
+    topic_names:
+    - '/safe_ovr_1'
+
+    # Acquisition time (to be specified for each topic)
+    duration:
+      - 1000 #[s]
+
+    # Message decimation (to be specified for each topic)
+    decimation:
+      - 1
+
