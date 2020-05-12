@@ -101,11 +101,11 @@ planner_hw:
   - "/ur5_on_guide/follow_joint_trajectory/result"
   - "/ur5_on_guide/follow_joint_trajectory/status"
 
-  - "/human_right_arm/follow_joint_trajectory/cancel"
-  - "/human_right_arm/follow_joint_trajectory/feedback"
-  - "/human_right_arm/follow_joint_trajectory/goal"
-  - "/human_right_arm/follow_joint_trajectory/result"
-  - "/human_right_arm/follow_joint_trajectory/status"
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
 
   ur5_thor_prefilter_planner:
     type: "thor/PrefilterPosVelEffController"
