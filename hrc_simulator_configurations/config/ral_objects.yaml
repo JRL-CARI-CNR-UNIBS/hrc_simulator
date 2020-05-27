@@ -1,0 +1,11 @@
+palo    : {box: [0.1, 0.1, 2], color: [0,0,255,1]} # color Red,Green,Blue,Alpha
+
+
+scene_objects:
+- {type: "palo", frame: "world", position: [1, 0 ,1], quaternion: [0, 0, 0, 1]}
+
+
+
+
+
+
