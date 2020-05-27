@@ -70,6 +70,32 @@ planner_hw:
   - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/result"
   - "/planner_hw/ur5_task_joint_ssm/follow_joint_trajectory/status"
 
+  - "/planner_hw/ur5_ral_B/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_ral_B/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_ral_B/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_ral_B/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_ral_B/follow_joint_trajectory/status"
+
+  - "/planner_hw/ur5_ral_D/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_ral_D/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_ral_D/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_ral_D/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_ral_D/follow_joint_trajectory/status"
+
+  - "/planner_hw/ur5_ral_C/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_ral_C/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_ral_C/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_ral_C/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_ral_C/follow_joint_trajectory/status"
+
+  - "/planner_hw/ur5_ral_A/follow_joint_trajectory/cancel"
+  - "/planner_hw/ur5_ral_A/follow_joint_trajectory/feedback"
+  - "/planner_hw/ur5_ral_A/follow_joint_trajectory/goal"
+  - "/planner_hw/ur5_ral_A/follow_joint_trajectory/result"
+  - "/planner_hw/ur5_ral_A/follow_joint_trajectory/status"
+
+
+
   remap_target_args:
   - "/ur5_on_guide/follow_joint_trajectory/cancel"
   - "/ur5_on_guide/follow_joint_trajectory/feedback"
@@ -94,6 +120,30 @@ planner_hw:
   - "/human_torso/follow_joint_trajectory/goal"
   - "/human_torso/follow_joint_trajectory/result"
   - "/human_torso/follow_joint_trajectory/status"
+
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
+
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
+
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
+
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
 
   - "/ur5_on_guide/follow_joint_trajectory/cancel"
   - "/ur5_on_guide/follow_joint_trajectory/feedback"
@@ -191,3 +241,106 @@ planner_hw:
     base_frame: "world"
     tool_frame: "ur5_tool0"
     elbow_frame: "ur5_forearm_link"
+
+  ur5_ral_B:
+    type: "taskQP/TaskCartesianPosController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+    selection_axis: [1, 1, 1, 1, 1, 1]
+    base_frame: "world"
+    tool_frame: "ur5_tool0"
+    elbow_frame: "ur5_forearm_link"
+    use_smooth_swap: false
+    delta_q_ref: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+    use_delta_q_max: false
+    use_delta_q_min: false
+    delta_q_max: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+
+
+  ur5_ral_D:
+    type: "taskQP/TaskCartesianPosController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+    selection_axis: [1, 1, 1, 1, 1, 1]
+    base_frame: "world"
+    tool_frame: "ur5_tool0"
+    elbow_frame: "ur5_forearm_link"
+    use_smooth_swap: true
+    delta_q_ref: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+    use_delta_q_max: true
+    use_delta_q_min: true
+    delta_q_max: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+
+  ur5_ral_C:
+    type: "taskQP/TaskCartesianPosController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+    selection_axis: [1, 1, 1, 1, 1, 1]
+    base_frame: "world"
+    tool_frame: "ur5_tool0"
+    elbow_frame: "ur5_forearm_link"
+    use_smooth_swap: true
+    delta_q_ref: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+    use_delta_q_max: false
+    use_delta_q_min: false
+    delta_q_max: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+
+  ur5_ral_A:
+    type: "taskQP/TaskCartesianPosController"
+    controlled_joint:
+    - linear_motor_cursor_joint
+    - ur5_shoulder_pan_joint
+    - ur5_shoulder_lift_joint
+    - ur5_elbow_joint
+    - ur5_wrist_1_joint
+    - ur5_wrist_2_joint
+    - ur5_wrist_3_joint
+
+    spline_order: 1
+    control_horizon: 0.2
+    prediction_size: 5
+    clik_gain: 100
+    selection_axis: [1, 1, 1, 1, 1, 1]
+    base_frame: "world"
+    tool_frame: "ur5_tool0"
+    elbow_frame: "ur5_forearm_link"
+    set_joint_trj_as_task: false
+    use_smooth_swap: false
+    delta_q_ref: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+    use_delta_q_max: false
+    use_delta_q_min: false
+    delta_q_max: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+
