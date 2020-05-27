@@ -11,6 +11,7 @@
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/planner_hw.yaml" />
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/clearance_controllers.yaml" />
 <!--<rosparam command="load" file="$(find dimostratore_configurations)/config/planner_topics_hw.yaml" />-->
+<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
       <param name="/use_gui" value="false"/>
