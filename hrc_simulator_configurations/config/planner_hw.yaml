@@ -288,10 +288,10 @@ planner_hw:
     tool_frame: "ur5_tool0"
     elbow_frame: "ur5_forearm_link"
     use_smooth_swap: true
-    delta_q_ref: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15]
+    delta_q_ref: [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3]
     use_delta_q_max: true
     use_delta_q_min: true
-    delta_q_max: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2]
+    delta_q_max: [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
 
   ur5_ral_C:
     type: "taskQP/TaskCartesianPosController"
