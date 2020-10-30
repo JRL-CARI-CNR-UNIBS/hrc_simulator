@@ -24,4 +24,4 @@ fake_body_link_name:
 
 configuration_dispatches:
   watch: 0.5
-  thor_joint_ssm: 2.0
+  task_joint_ssm: 2.0
