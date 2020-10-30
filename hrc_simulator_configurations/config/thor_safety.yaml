@@ -21,3 +21,7 @@ fake_body_link_name:
 - RightUpperArm_f2
 - RightWristY
 - RightWristX
+
+configuration_dispatches:
+  watch: 0.5
+  thor_joint_ssm: 2.0
