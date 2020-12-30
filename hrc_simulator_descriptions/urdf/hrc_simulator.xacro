@@ -16,7 +16,8 @@
 
 <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
 
-<xacro:ur5_robot prefix="ur5_" joint_limited="true"/>
+<xacro:arg name="kinematics_config" default="$(find ur_description)/config/ur5_default.yaml"/>
+<xacro:ur5_robot prefix="ur5_" joint_limited="true" kinematics_file="${load_yaml('$(arg kinematics_config)')}"/>
 <joint name="ur5_joint" type="fixed">
   <parent link="elmo_linear_guide_cursor" />
   <child  link = "ur5_base_link" />
