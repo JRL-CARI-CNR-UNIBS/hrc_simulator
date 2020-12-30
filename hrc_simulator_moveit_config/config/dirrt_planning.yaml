@@ -14,4 +14,4 @@ mao:
   max_distance: 0.5
   max_refine_time: 3
   extend: false
-  local_bias: 0.0
+  local_bias: 0.5
