@@ -7,12 +7,13 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   tf
   tf_conversions
+  object_loader_msgs
 )
 
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES fake_people_detection
-  CATKIN_DEPENDS geometry_msgs roscpp tf tf_conversions
+  CATKIN_DEPENDS geometry_msgs roscpp tf tf_conversions object_loader_msgs
   DEPENDS
 )
 
