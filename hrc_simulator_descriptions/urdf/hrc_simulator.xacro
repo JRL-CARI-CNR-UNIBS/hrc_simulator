@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="hrc_simulator" >
 
+<xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
 
 <xacro:include filename="$(find hrc_simulator_descriptions)/urdf/conveyor_system.urdf.xacro" />
 <xacro:conveyor_system/>
@@ -14,10 +16,10 @@
 <xacro:include filename="$(find hrc_simulator_descriptions)/urdf/wheeled_table_dim.urdf.xacro" />
 <xacro:wheeled_table_dim/>
 
-<xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
-
-<xacro:arg name="kinematics_config" default="$(find ur_description)/config/ur5_default.yaml"/>
-<xacro:ur5_robot prefix="ur5_" joint_limited="true" kinematics_file="${load_yaml('$(arg kinematics_config)')}"/>
+<xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro"/>
+<xacro:ur5_robot prefix="ur5_" 
+   transmission_hw_interface="$(arg transmission_hw_interface)"
+/>
 <joint name="ur5_joint" type="fixed">
   <parent link="elmo_linear_guide_cursor" />
   <child  link = "ur5_base_link" />
