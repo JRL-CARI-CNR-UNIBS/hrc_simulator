@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <gazebo>
+    <plugin name="state_server" filename="libJointStateServer.so"/>
+    <plugin name="brakes_server" filename="libBrakesServer.so"/>
+  </gazebo>
+</robot>

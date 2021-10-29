@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--URDF MODEL only arms-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_velocity_trans.xacro"/>
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_position_trans.xacro"/>
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_effort_trans.xacro"/>
+
+  <xacro:macro name="walk_transmission" params="position:=false velocity:=false effort:=false" >
+
+    <xacro:if value="${position}">
+      <xacro:position_transmission joint_name="joint_traslx"/>
+      <xacro:position_transmission joint_name="joint_trasly"/>
+      <xacro:position_transmission joint_name="joint_orientation"/>
+      <xacro:position_transmission joint_name="Belly_rotz"/>
+      <xacro:position_transmission joint_name="Belly_rotx"/>
+      <xacro:position_transmission joint_name="Belly_roty"/>
+    </xacro:if>
+
+    <xacro:if value="${velocity}">
+      <xacro:velocity_transmission joint_name="joint_traslx"/>
+      <xacro:velocity_transmission joint_name="joint_trasly"/>
+      <xacro:velocity_transmission joint_name="joint_orientation"/>
+      <xacro:velocity_transmission joint_name="Belly_rotz"/>
+      <xacro:velocity_transmission joint_name="Belly_rotx"/>
+      <xacro:velocity_transmission joint_name="Belly_roty"/>
+    </xacro:if>
+
+    <xacro:if value="${effort}">
+      <xacro:effort_transmission joint_name="joint_traslx"/>
+      <xacro:effort_transmission joint_name="joint_trasly"/>
+      <xacro:effort_transmission joint_name="joint_orientation"/>
+      <xacro:effort_transmission joint_name="Belly_rotz"/>
+      <xacro:effort_transmission joint_name="Belly_rotx"/>
+      <xacro:effort_transmission joint_name="Belly_roty"/>
+    </xacro:if>
+
+  </xacro:macro>
+
+</robot>

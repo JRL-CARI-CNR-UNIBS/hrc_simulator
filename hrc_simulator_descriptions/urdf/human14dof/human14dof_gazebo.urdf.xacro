@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--URDF MODEL 13 DoFs-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="human">
+
+  <xacro:macro name="human14dof_gazebo" params="joint_limited trans_position:=false trans_velocity:=false trans_effort:=false" >
+
+    <xacro:include filename="$(find rl_gazebo_description)/urdf/robots/human/human14dof/human14dof.urdf.xacro"/>
+    <xacro:include filename="$(find rl_gazebo_description)/urdf/robots/human/human14dof/arms_transmission.urdf.xacro"/>
+    <xacro:include filename="$(find rl_gazebo_description)/urdf/robots/human/human14dof/lowerbody_transmission.urdf.xacro"/>
+    <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_selfcoll.xacro"/>
+
+    <xacro:human14dof joint_limited="${joint_limited}"/>
+
+    <xacro:arms_transmission position="${trans_position}" velocity="${trans_velocity}" effort="${trans_effort}"/>
+    <xacro:walk_transmission position="${trans_position}" velocity="${trans_velocity}" effort="${trans_effort}"/>
+
+    <xacro:self_coll link_name="RightForeArm"/>
+    <xacro:self_coll link_name="RightHand"/>
+    <xacro:self_coll link_name="LeftForeArm"/>
+    <xacro:self_coll link_name="LeftHand"/>
+
+  </xacro:macro>
+
+</robot>

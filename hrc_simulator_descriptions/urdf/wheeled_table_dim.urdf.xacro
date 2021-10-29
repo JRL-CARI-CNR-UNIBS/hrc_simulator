@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+ 
+  <xacro:macro name="wheeled_table_dim">
+
+  <link name="tabletop">
+    <visual>
+      <origin xyz="0.497588819111708 0.333513492980419 -0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.995177638223416 0.667026985960838 0.04"/>
+      </geometry>
+      <material name="wood">
+        <color rgba="0.713725490196078   0.607843137254902   0.298039215686275 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="10" />
+        <inertia
+          ixx="1.0" ixy="0.0" ixz="0.0"
+          iyy="1.0" iyz="0.0"
+          izz="1.0" />
+    </inertial>
+  </link>
+  
+  <link name="table">
+    <visual>
+      <origin xyz="0 0 -0.4" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.6 0.8"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0   0   0.7 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="10" />
+        <inertia
+          ixx="1.0" ixy="0.0" ixz="0.0"
+          iyy="1.0" iyz="0.0"
+          izz="1.0" />
+    </inertial>
+  </link>
+  
+  <joint name="table_joint" type="fixed">
+    <parent link="tabletop" />
+    <child link = "table" />
+    <origin xyz="0.497588819111708 0.333513492980419 -0.04" rpy="0 0 0" />
+  </joint>
+
+
+  </xacro:macro>
+</robot>

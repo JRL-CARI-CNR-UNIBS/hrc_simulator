@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--URDF MODEL 13 DoFs-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:macro name="human14dof" params="joint_limited:=${1}
+    Pelvis_height:=${0.81}
+    Pelvis_box_x:=${0.23} Pelvis_box_y:=${0.33} Pelvis_box_z:=${0.165}
+    Belly_box_x:=${0.23}  Belly_box_y:=${0.33} Belly_box_z=${0.29}
+    Chest_box_x:=${0.23} Chest_box_y:=${0.35} Chest_box_z:=${0.19}
+    UpperArm_length:=${0.27}   UpperArm_radius:=${0.0406}
+    ForeArm_length:=${0.255}   ForeArm_radius:=${0.0334}  ">
+    <xacro:include filename="$(find hrc_simulator_descriptions)/urdf/human14dof/human_only_arms.urdf.xacro"/>
+    <xacro:human_model joint_limited="${joint_limited}"
+      Pelvis_box_x="${Pelvis_box_x}" Pelvis_box_y="${Pelvis_box_y}" Pelvis_box_z="${Pelvis_box_z}"
+      Belly_box_x="${Belly_box_x}"  Belly_box_y="${Belly_box_y}" Belly_box_z="${Belly_box_z}"
+      Chest_box_x="${Chest_box_x}" Chest_box_y="${Chest_box_y}" Chest_box_z="${Chest_box_z}"
+      UpperArm_length="${UpperArm_length}"   UpperArm_radius="${UpperArm_radius}"
+      ForeArm_length="${ForeArm_length}"   ForeArm_radius="${ForeArm_radius}"/>
+
+    <link name="origin_human14dof">
+      <inertial>
+        <mass value="1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="1e-2" iyy="1e-2" izz="1e-2" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+    <link name="fake">
+      <inertial>
+        <mass value="1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="1e-2" iyy="1e-2" izz="1e-2" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+    <link name="fake2">
+      <inertial>
+        <mass value="1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="1e-2" iyy="1e-2" izz="1e-2" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+    <joint name="joint_traslx" type="prismatic">
+      <origin xyz="0 0 ${Pelvis_height}" rpy="0 0 0"/>
+      <parent link="origin_human14dof"/>
+      <child link="fake"/>
+      <dynamics damping="0.1" friction="0.1"/>
+      <limit effort="3000" velocity="10.0" lower="-2" upper="2" />
+      <axis xyz="1 0 0" />
+    </joint>
+
+    <joint name="joint_trasly" type="prismatic">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="fake"/>
+      <child link="fake2"/>
+      <dynamics damping="0.1" friction="0.1"/>
+      <limit effort="3000" velocity="2.0" lower="-2" upper="2" />
+      <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="joint_orientation" type="revolute">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="fake2"/>
+      <child link="Pelvis"/>
+      <dynamics damping="0.1" friction="0.1"/>
+      <limit effort="3000" velocity="10.0" lower="-3.142" upper="3.142" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+  </xacro:macro>
+
+</robot>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--URDF MODEL only arms-->
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_velocity_trans.xacro"/>
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_position_trans.xacro"/>
+  <xacro:include filename="$(find rl_gazebo_description)/urdf/macros/macro_effort_trans.xacro"/>
+
+  <xacro:macro name="arms_transmission" params="position:=false velocity:=false effort:=false">
+
+    <xacro:if value="${position}">
+      <xacro:position_transmission joint_name="jRightShoulder_rotx"/>
+      <xacro:position_transmission joint_name="jRightShoulder_roty"/>
+      <xacro:position_transmission joint_name="jRightShoulder_rotz"/>
+      <xacro:position_transmission joint_name="jRightElbow_rotz"/>
+
+      <xacro:position_transmission joint_name="jLeftShoulder_rotx"/>
+      <xacro:position_transmission joint_name="jLeftShoulder_roty"/>
+      <xacro:position_transmission joint_name="jLeftShoulder_rotz"/>
+      <xacro:position_transmission joint_name="jLeftElbow_rotz"/>
+    </xacro:if>
+
+    <xacro:if value="${velocity}">
+      <xacro:velocity_transmission joint_name="jRightShoulder_rotx"/>
+      <xacro:velocity_transmission joint_name="jRightShoulder_roty"/>
+      <xacro:velocity_transmission joint_name="jRightShoulder_rotz"/>
+      <xacro:velocity_transmission joint_name="jRightElbow_rotz"/>
+
+      <xacro:velocity_transmission joint_name="jLeftShoulder_rotx"/>
+      <xacro:velocity_transmission joint_name="jLeftShoulder_roty"/>
+      <xacro:velocity_transmission joint_name="jLeftShoulder_rotz"/>
+      <xacro:velocity_transmission joint_name="jLeftElbow_rotz"/>
+    </xacro:if>
+
+    <xacro:if value="${effort}">
+      <xacro:effort_transmission joint_name="jRightShoulder_rotx"/>
+      <xacro:effort_transmission joint_name="jRightShoulder_roty"/>
+      <xacro:effort_transmission joint_name="jRightShoulder_rotz"/>
+      <xacro:effort_transmission joint_name="jRightElbow_rotz"/>
+
+      <xacro:effort_transmission joint_name="jLeftShoulder_rotx"/>
+      <xacro:effort_transmission joint_name="jLeftShoulder_roty"/>
+      <xacro:effort_transmission joint_name="jLeftShoulder_rotz"/>
+      <xacro:effort_transmission joint_name="jLeftElbow_rotz"/>
+    </xacro:if>
+
+  </xacro:macro>
+</robot>

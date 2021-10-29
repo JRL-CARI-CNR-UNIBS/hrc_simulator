@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+ 
+  <xacro:macro name="shopdesk">
+
+
+  
+  <link name="shopdesk">
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="2 0.8 1.0"/>
+      </geometry>
+      <material name="sabbia">
+        <color rgba="0.7765	0.651	0.392156862745098 1.0"/>
+      </material>
+    </visual>
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="10" />
+        <inertia
+          ixx="1.0" ixy="0.0" ixz="0.0"
+          iyy="1.0" iyz="0.0"
+          izz="1.0" />
+    </inertial>
+    <collision>
+      <origin xyz="0 0 -0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="2.04 0.84 1.6"/>
+      </geometry>
+      <material name="sabbia">
+        <color rgba="0.7765	0.651	0.392156862745098 1.0"/>
+      </material>
+    </collision>
+  </link>
+  
+
+
+
+  </xacro:macro>
+</robot>

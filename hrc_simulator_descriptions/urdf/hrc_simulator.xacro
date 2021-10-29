@@ -2,16 +2,16 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="hrc_simulator" >
 
 
-<xacro:include filename="$(find stiima_lab_descriptions)/urdf/conveyor_system.urdf.xacro" />
+<xacro:include filename="$(find hrc_simulator_descriptions)/urdf/conveyor_system.urdf.xacro" />
 <xacro:conveyor_system/>
 
-<xacro:include filename="$(find stiima_lab_descriptions)/urdf/shopdesk_dim.urdf.xacro" />
+<xacro:include filename="$(find hrc_simulator_descriptions)/urdf/shopdesk_dim.urdf.xacro" />
 <xacro:shopdesk/>
 
-<xacro:include filename="$(find stiima_lab_descriptions)/urdf/elmo_linear_guide.urdf.xacro" />
+<xacro:include filename="$(find hrc_simulator_descriptions)/urdf/elmo_linear_guide.urdf.xacro" />
 <xacro:elmo_linear_guide/>
 
-<xacro:include filename="$(find stiima_lab_descriptions)/urdf/wheeled_table_dim.urdf.xacro" />
+<xacro:include filename="$(find hrc_simulator_descriptions)/urdf/wheeled_table_dim.urdf.xacro" />
 <xacro:wheeled_table_dim/>
 
 <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro" />
@@ -24,7 +24,7 @@
 </joint>
 
 
-<xacro:include filename="$(find stiima_lab_descriptions)/urdf/human14dof/human14dof.urdf.xacro"/>
+<xacro:include filename="$(find hrc_simulator_descriptions)/urdf/human14dof/human14dof.urdf.xacro"/>
 <xacro:human14dof/>
 
 <joint name="human_fixed_joint" type="fixed">
