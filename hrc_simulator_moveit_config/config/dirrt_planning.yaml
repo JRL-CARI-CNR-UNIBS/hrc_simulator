@@ -7,7 +7,8 @@ mg:
   max_distance: 0.5
   max_refine_time: 1
   extend: false
-  local_bias: 0.0
+  local_bias: 0.25
+  tube_radius: 0.01
   
 mao:
   type: Multigoal
@@ -15,3 +16,4 @@ mao:
   max_refine_time: 3
   extend: false
   local_bias: 0.5
+  tube_radius: 0.01
