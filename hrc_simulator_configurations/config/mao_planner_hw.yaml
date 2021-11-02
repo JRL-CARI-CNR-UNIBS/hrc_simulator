@@ -17,10 +17,10 @@ mao_planner_hw:
     - jRightWristRoll
     - jRightWristPitch
     - jRightWristYaw
-    - jLeftShoulder_rotx
-    - jLeftShoulder_roty
-    - jLeftShoulder_rotz
-    - jLeftElbow_rotz
+    #- jLeftShoulder_rotx
+    #- jLeftShoulder_roty
+    #- jLeftShoulder_rotz
+    #- jLeftElbow_rotz
     - joint_traslx
     - joint_trasly
     - joint_orientation
@@ -37,10 +37,10 @@ mao_planner_hw:
     - /mao/joint_states
     - /mao/joint_states
     - /mao/joint_states
-    - /mao/joint_states
-    - /mao/joint_states
-    - /mao/joint_states
-    - /mao/joint_states
+    #- /mao/joint_states
+    #- /mao/joint_states
+    #- /mao/joint_states
+    #- /mao/joint_states
     published_topics :
     - /mao/joint_target
 
