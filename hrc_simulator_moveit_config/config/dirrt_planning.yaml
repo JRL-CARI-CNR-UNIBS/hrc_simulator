@@ -1,7 +1,7 @@
 group_names_map:
   mg1:                           ur5_on_guide
   mg1_mao:                       human_right_arm
-default_planner_config: mg1
+#default_planner_config: mg1
 
 mg1:
   type: Multigoal
