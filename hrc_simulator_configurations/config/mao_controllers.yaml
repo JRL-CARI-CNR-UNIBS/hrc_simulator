@@ -1,0 +1,19 @@
+mao_hw:
+  remap_source_args:
+  - "/mao_hw/js_pub/joint_states"
+  remap_target_args:
+  - "/mao/joint_states"
+
+  js_pub:
+    type: cnr/control/JointStatePublisher
+    controlled_joint: all
+    base_link: world
+    tool_link: RightTip
+    robot_description_param: /robot_description
+    robot_description_planning_param: /robot_description_planning
+
+  ctrl1:
+    type:        cnr/control/OpenLoopPositionController
+    setpoint_topic_name: "/mao/joint_target"
+    controlled_joints: all
+    enable_setpoint_watchdog: false

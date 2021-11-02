@@ -1,0 +1,35 @@
+planner_hw:
+  remap_source_args:
+  - "/planner_hw/microinterpolator/follow_joint_trajectory/cancel"
+  - "/planner_hw/microinterpolator/follow_joint_trajectory/feedback"
+  - "/planner_hw/microinterpolator/follow_joint_trajectory/goal"
+  - "/planner_hw/microinterpolator/follow_joint_trajectory/result"
+  - "/planner_hw/microinterpolator/follow_joint_trajectory/status"
+  - "/planner_hw/microinterpolator/unscaled_joint_target/joint_states"
+  - "/planner_hw/js_pub/joint_states"
+  remap_target_args:
+  - "/ur5/follow_joint_trajectory/cancel"
+  - "/ur5/follow_joint_trajectory/feedback"
+  - "/ur5/follow_joint_trajectory/goal"
+  - "/ur5/follow_joint_trajectory/result"
+  - "/ur5/follow_joint_trajectory/status"
+  - "/unscaled_joint_target"
+  - "/joint_states"
+
+  js_pub:
+    type: cnr/control/JointStatePublisher
+    controlled_joint: all
+    base_link: world
+    tool_link: ur5_tool0
+    robot_description_param: /robot_description
+    robot_description_planning_param: /robot_description_planning
+
+
+  microinterpolator:
+    type: "cnr/control/ScaledFJTPosController"
+    controlled_joints: all
+    continuity_order: 1
+    
+  joint_teleop:
+    type: cnr/control/JointTeleopController
+    controlled_joints: all

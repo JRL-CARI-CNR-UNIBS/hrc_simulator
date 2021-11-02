@@ -1,27 +1,82 @@
 <?xml version="1.0"?>
-
 <launch>
-  <node pkg="nodelet" type="nodelet" name="manager"  args="manager" output="screen"> 
-    <param name="num_worker_threads" value="20" />
-  </node>
-  <arg name="gui" default="false"/>
-  
+<arg name="fake" default="true"/>
+<arg name="use_rviz" default="true" />
+<arg name="debug" default="false" />
+<arg name="pipeline" default="ompl" />
+
+
+<arg unless="$(arg debug)" name="launch_prefix" value="" />
+<arg     if="$(arg debug)" name="launch_prefix"
+ value="gdb --ex run --args" />
+
+<include file="$(find hrc_simulator_descriptions)/launch/upload.launch"/>
+
+<!--Load configurations-->
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
-<rosparam command="load" file="$(find hrc_simulator_configurations)/config/fake_hw.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_dispatches.yaml" />
+
+<!--Load robot hardware-->
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/planner_hw.yaml" />
-<rosparam command="load" file="$(find hrc_simulator_configurations)/config/clearance_controllers.yaml" />
-<!--<rosparam command="load" file="$(find dimostratore_configurations)/config/planner_topics_hw.yaml" />-->
-<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
+<!--<rosparam unless="$(arg fake)" command="load" file="$(find hrc_simulator_configurations)/config/ur5_hw.yaml" />-->
+<!--<rosparam unless="$(arg fake)" command="load" file="$(find hrc_simulator_configurations)/config/elmo_hw.yaml" />-->
+<rosparam     if="$(arg fake)" command="load" file="$(find hrc_simulator_configurations)/config/fake_ur5_hw.yaml" />
+<rosparam     if="$(arg fake)" command="load" file="$(find hrc_simulator_configurations)/config/fake_elmo_hw.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/mao_planner_hw.yaml" />
+<rosparam     if="$(arg fake)" command="load" file="$(find hrc_simulator_configurations)/config/fake_mao_hw.yaml" />
 
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-      <param name="/use_gui" value="false"/>
-      <rosparam param="/source_list">[/ur5/joint_states,/elmo/joint_states,/mao/joint_states]</rosparam>
-    </node>
-<!--  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />-->
+<!--Load controllers-->
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/planner_controllers.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/ur5_controllers.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/elmo_controllers.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/mao_planner_controllers.yaml" />
+<rosparam command="load" file="$(find hrc_simulator_configurations)/config/mao_controllers.yaml" />
 
-<node pkg="itia_configuration_manager" type="configuration_manager" name="controller_manager" output="screen"/>
-<node pkg="itia_configuration_manager" type="dispatcher" name="dispatcher" output="screen"/>
-  
 
-  
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
+
+<node launch-prefix="$(arg launch_prefix)"
+      pkg="cnr_configuration_manager"
+      type="cnr_configuration_manager_node"
+      name="configuration_manager" output="screen">
+
+  <rosparam>
+    appenders: [screen,file]
+    levels: [info,info]
+    file_name: "aaa"
+    append_to_file: true
+    pattern_layout: "[%5p][%d{HH:mm:ss,SSS}][%M:%04L][%c] %m%n"
+  </rosparam>
+
+  <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
+</node>
+
+
+<node pkg="cnr_configuration_manager" type="dispatcher" name="configuration_dispatcher" output="screen" >
+<rosparam>
+  appenders: [screen]
+  levels: [info]
+  file_name: "bbb"
+  pattern_layout: "[%5p][%d{HH:mm:ss,SSS}][%M:%04L][%c] %m%n"
+</rosparam>
+  <param name="num_worker_threads" value="40" />
+  <remap from="~configuration_dispatches" to="/configuration_dispatches" />
+</node>
+
+
+<include file="$(find hrc_simulator_moveit_config)/launch/move_group.launch">
+  <arg name="allow_trajectory_execution" value="true"/>
+  <arg name="fake_execution" value="false"/>
+  <arg name="info" value="true"/>
+  <arg name="debug" value="$(arg debug)"/>
+  <arg name="pipeline" value="$(arg pipeline)"/>
+</include>
+
+<include file="$(find hrc_simulator_moveit_config)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+  <arg name="rviz_config" value="$(find hrc_simulator_moveit_config)/launch/moveit.rviz"/>
+  <arg name="debug" value="$(arg debug)"/>
+</include>
+
+
 </launch>

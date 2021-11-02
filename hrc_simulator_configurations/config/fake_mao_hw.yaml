@@ -1,0 +1,34 @@
+mao_hw:
+  type           : cnr/control/FakeRobotHW
+  appenders      : [file, screen]
+  levels         : [trace, debug]
+  pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%50M:%04L][%24c] %m%n"
+  file_name      : mao_hw
+  sampling_period: 0.008
+  diagnostic_period: 0.1
+  maximum_missing_cycles: 100
+  feedback_joint_state_timeout: 10
+  joint_names:
+  - Belly_rotx
+  - Belly_roty
+  - jRightShoulder_rotx
+  - jRightShoulder_roty
+  - jRightShoulder_rotz
+  - jRightElbow_rotz
+  - jRightWristRoll
+  - jRightWristPitch
+  - jRightWristYaw
+  - jLeftShoulder_rotx
+  - jLeftShoulder_roty
+  - jLeftShoulder_rotz
+  - jLeftElbow_rotz
+  - joint_traslx
+  - joint_trasly
+  - joint_orientation
+  base_link: world
+  tool_link: RightTip
+  robot_description_param: /robot_description
+  robot_description_planning_param: /robot_description_planning
+
+
+  initial_position: [9.105649827979505e-05, 3.35796186234802e-05, 0.008796351798018439, 0.3385418147488032, 0.7506488721689676, 0.8764253956129309, 0.36453462007460186, -0.01736111295665614, -0.15622582588633524, -1.2756961155408528, 1.352749709039926e-05, -9.380312701687217e-05, -7.660039092879742e-05, 0.05514946264894679, 8.042699191719349e-07, -9.105743253603578e-05]
