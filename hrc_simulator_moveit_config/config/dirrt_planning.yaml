@@ -1,19 +1,26 @@
 group_names_map:
-  mg: ur5_on_guide
-  mao: human_right_arm
+  mg1:                           ur5_on_guide
+  mg1_mao:                       human_right_arm
+default_planner_config: mg1
 
-mg:
+mg1:
   type: Multigoal
   max_distance: 0.5
-  max_refine_time: 1
-  extend: false
+  max_refine_time: 1500.0
+  rewire_radius: 2.0
+  extend: true
   local_bias: 0.25
-  tube_radius: 0.01
-  
-mao:
+  forgetting_factor: 0.999
+  tube_radius: 0.02
+  utopia_tolerance: 0.01
+
+mg1_mao:
   type: Multigoal
   max_distance: 0.5
-  max_refine_time: 3
-  extend: false
-  local_bias: 0.5
-  tube_radius: 0.01
+  max_refine_time: 1500.0
+  rewire_radius: 2.0
+  extend: true
+  local_bias: 0.25
+  forgetting_factor: 0.999
+  tube_radius: 0.02
+  utopia_tolerance: 0.01

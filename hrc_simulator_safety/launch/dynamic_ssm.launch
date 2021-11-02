@@ -2,10 +2,12 @@
 <launch>
 
 
-<node pkg="velocity_scaling_iso15066" type="velocity_scaling_iso15066_node" name="safety" output="log">
+<node pkg="velocity_scaling_iso15066" type="velocity_scaling_iso15066_node" name="safety" output="screen">
   <rosparam file="$(find hrc_simulator_safety)/config/thor_safety.yaml" command="load"/>
 </node>
 
-<node pkg="fake_people_detection" name="fake_people_detection" type="node" output="screen" /> 
+<node pkg="fake_people_detection" name="fake_people_detection" type="node" output="screen">
+</node>
+<rosparam file="$(find hrc_simulator_safety)/config/fake_people_detection.yaml" command="load"/>
 
 </launch>

@@ -5,7 +5,7 @@ planner_hw:
   - "/planner_hw/microinterpolator/follow_joint_trajectory/goal"
   - "/planner_hw/microinterpolator/follow_joint_trajectory/result"
   - "/planner_hw/microinterpolator/follow_joint_trajectory/status"
-  - "/planner_hw/microinterpolator/unscaled_joint_target/joint_states"
+  - "/planner_hw/microinterpolator/unscaled_joint_target"
   - "/planner_hw/js_pub/joint_states"
   remap_target_args:
   - "/ur5_on_guide/follow_joint_trajectory/cancel"
@@ -14,7 +14,7 @@ planner_hw:
   - "/ur5_on_guide/follow_joint_trajectory/result"
   - "/ur5_on_guide/follow_joint_trajectory/status"
   - "/unscaled_joint_target"
-  - "/joint_states"
+  - "/ur5_on_guide/joint_states"
 
   js_pub:
     type: cnr/control/JointStatePublisher

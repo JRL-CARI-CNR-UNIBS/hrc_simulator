@@ -1,6 +1,6 @@
 <launch>
 
-  <!-- Human-aware Plugin for MoveIt! -->
+  <!-- DIRRT Plugin for MoveIt! -->
   <arg name="planning_plugin" value="pathplan/DIRRTStar" />
 
   <!-- The request adapters (plugins) used when planning with OMPL.
@@ -20,5 +20,3 @@
   <rosparam command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml"/>
 
 </launch>
-
-

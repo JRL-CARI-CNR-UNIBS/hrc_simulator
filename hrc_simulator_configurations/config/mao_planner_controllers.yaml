@@ -5,7 +5,6 @@ mao_planner_hw:
   - "/mao_planner_hw/microinterpolator/follow_joint_trajectory/goal"
   - "/mao_planner_hw/microinterpolator/follow_joint_trajectory/result"
   - "/mao_planner_hw/microinterpolator/follow_joint_trajectory/status"
-  - "/mao_planner_hw/microinterpolator/unscaled_joint_target/joint_states"
   - "/mao_planner_hw/js_pub/joint_states"
   remap_target_args:
   - "/human_right_arm/follow_joint_trajectory/cancel"
@@ -13,8 +12,7 @@ mao_planner_hw:
   - "/human_right_arm/follow_joint_trajectory/goal"
   - "/human_right_arm/follow_joint_trajectory/result"
   - "/human_right_arm/follow_joint_trajectory/status"
-  - "/unscaled_joint_target"
-  - "/joint_states"
+  - "/mao/joint_states"
 
   js_pub:
     type: cnr/control/JointStatePublisher
@@ -29,6 +27,8 @@ mao_planner_hw:
     type: "cnr/control/ScaledFJTPosController"
     controlled_joints: all
     continuity_order: 1
+    overrides:
+    - safe_ovr_mao
 
   joint_teleop:
     type: cnr/control/JointTeleopController

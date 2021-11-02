@@ -33,6 +33,12 @@
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/mao_controllers.yaml" />
 
 
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+  <rosparam param="source_list">[ur5_on_guide/joint_states, mao/joint_states]</rosparam>
+  <rosparam param="rate">125</rosparam>
+  <rosparam param="publish_default_velocities">true</rosparam>
+</node>
+
 <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
 
