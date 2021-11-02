@@ -8,11 +8,11 @@ mao_planner_hw:
   - "/mao_planner_hw/microinterpolator/unscaled_joint_target/joint_states"
   - "/mao_planner_hw/js_pub/joint_states"
   remap_target_args:
-  - "/mao/follow_joint_trajectory/cancel"
-  - "/mao/follow_joint_trajectory/feedback"
-  - "/mao/follow_joint_trajectory/goal"
-  - "/mao/follow_joint_trajectory/result"
-  - "/mao/follow_joint_trajectory/status"
+  - "/human_right_arm/follow_joint_trajectory/cancel"
+  - "/human_right_arm/follow_joint_trajectory/feedback"
+  - "/human_right_arm/follow_joint_trajectory/goal"
+  - "/human_right_arm/follow_joint_trajectory/result"
+  - "/human_right_arm/follow_joint_trajectory/status"
   - "/unscaled_joint_target"
   - "/joint_states"
 

@@ -8,11 +8,11 @@ planner_hw:
   - "/planner_hw/microinterpolator/unscaled_joint_target/joint_states"
   - "/planner_hw/js_pub/joint_states"
   remap_target_args:
-  - "/ur5/follow_joint_trajectory/cancel"
-  - "/ur5/follow_joint_trajectory/feedback"
-  - "/ur5/follow_joint_trajectory/goal"
-  - "/ur5/follow_joint_trajectory/result"
-  - "/ur5/follow_joint_trajectory/status"
+  - "/ur5_on_guide/follow_joint_trajectory/cancel"
+  - "/ur5_on_guide/follow_joint_trajectory/feedback"
+  - "/ur5_on_guide/follow_joint_trajectory/goal"
+  - "/ur5_on_guide/follow_joint_trajectory/result"
+  - "/ur5_on_guide/follow_joint_trajectory/status"
   - "/unscaled_joint_target"
   - "/joint_states"
 
@@ -29,7 +29,7 @@ planner_hw:
     type: "cnr/control/ScaledFJTPosController"
     controlled_joints: all
     continuity_order: 1
-    
+
   joint_teleop:
     type: cnr/control/JointTeleopController
     controlled_joints: all
