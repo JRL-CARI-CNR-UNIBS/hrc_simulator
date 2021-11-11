@@ -70,6 +70,7 @@
   <remap from="~configuration_dispatches" to="/configuration_dispatches" />
 </node>
 
+<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
 
 <include file="$(find hrc_simulator_moveit_config)/launch/move_group.launch">
   <arg name="allow_trajectory_execution" value="true"/>

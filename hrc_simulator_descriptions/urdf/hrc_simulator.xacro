@@ -17,7 +17,7 @@
 <xacro:wheeled_table_dim/>
 
 <xacro:include filename="$(find ur_description)/urdf/inc/ur5_macro.xacro"/>
-<xacro:ur5_robot prefix="ur5_" 
+<xacro:ur5_robot prefix="ur5_"
    transmission_hw_interface="$(arg transmission_hw_interface)"
 />
 <joint name="ur5_joint" type="fixed">
@@ -97,7 +97,7 @@
 
 <link name="floor">
   <collision>
-    <origin  xyz="0.0 0.0 -0.5" rpy="0 0 0" />
+    <origin  xyz="0.0 0.0 -0.6" rpy="0 0 0" />
     <geometry>
       <box size="8 8 1.0"/>
     </geometry>
@@ -127,7 +127,7 @@
 
 <link name="wall2">
   <collision>
-    <origin  xyz="0.0 -0.5 1.5" rpy="0 0 0" />
+    <origin  xyz="0.0 -0.5 1.25" rpy="0 0 0" />
     <geometry>
       <box size="8 1 1.5"/>
     </geometry>
@@ -136,7 +136,7 @@
 <joint name="wall2_joint" type="fixed">
   <parent link = "world" />
   <child  link = "wall2" />
-<origin xyz="2 -1 0" rpy="0 0 0.0" />
+<origin xyz="2 -1.5 0" rpy="0 0 0.0" />
 </joint>
 
 

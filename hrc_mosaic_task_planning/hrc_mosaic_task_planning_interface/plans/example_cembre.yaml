@@ -1,0 +1,15 @@
+robot_plan:
+  - cmd_id: '0'
+    task: pickplace-A1
+  - cmd_id: '1'
+    task: pickplace-A2
+  - cmd_id: '2'
+    task: end
+
+human_plan:
+  - cmd_id: '100'
+    task: pickplace-B1
+  - cmd_id: '1'
+    task: pickplace-B2
+  - cmd_id: '2'
+    task: end
