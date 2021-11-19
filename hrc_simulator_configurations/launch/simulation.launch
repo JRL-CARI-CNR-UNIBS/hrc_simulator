@@ -39,7 +39,9 @@
   <rosparam param="publish_default_velocities">true</rosparam>
 </node>
 
-<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" >
+  <rosparam param="publish_frequency">125</rosparam>
+</node>
 
 
 <node launch-prefix="$(arg launch_prefix)"
