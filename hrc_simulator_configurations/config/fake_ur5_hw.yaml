@@ -1,7 +1,7 @@
 ur5_hw:
   type           : cnr/control/FakeRobotHW
   appenders      : [file, screen]
-  levels         : [trace, debug]
+  levels         : [debug, debug]
   pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%50M:%04L][%24c] %m%n"
   file_name      : ur5_hw
   sampling_period: 0.008

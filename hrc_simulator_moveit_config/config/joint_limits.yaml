@@ -5,73 +5,73 @@ joint_limits:
   Belly_rotx:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   Belly_roty:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jLeftElbow_rotz:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jLeftShoulder_rotx:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jLeftShoulder_roty:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jLeftShoulder_rotz:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightElbow_rotz:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightShoulder_rotx:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightShoulder_roty:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightShoulder_rotz:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightWristPitch:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightWristRoll:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   jRightWristYaw:
     has_velocity_limits: true
     max_velocity: 10
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   joint_orientation:
     has_velocity_limits: true
     max_velocity: 2
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   joint_traslx:
     has_velocity_limits: true
     max_velocity: 1
@@ -87,33 +87,38 @@ joint_limits:
     max_velocity: 1
     has_acceleration_limits: true
     max_acceleration: 2
+
   ur5_elbow_joint:
     has_velocity_limits: true
     max_velocity: 3.15
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
+    max_position: 2.792
+    min_position: -2.792
   ur5_shoulder_lift_joint:
     has_velocity_limits: true
     max_velocity: 3.15
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
+    max_position: 0.0
+    min_position: -3.142707997500617
   ur5_shoulder_pan_joint:
     has_velocity_limits: true
     max_velocity: 3.15
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   ur5_wrist_1_joint:
     has_velocity_limits: true
     max_velocity: 3.2
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   ur5_wrist_2_joint:
     has_velocity_limits: true
     max_velocity: 3.2
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10
   ur5_wrist_3_joint:
     has_velocity_limits: true
     max_velocity: 3.2
-    has_acceleration_limits: false
-    max_acceleration: 0
+    has_acceleration_limits: true
+    max_acceleration: 10

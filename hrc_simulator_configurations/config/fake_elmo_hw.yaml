@@ -1,7 +1,7 @@
 coe_hw:
   type           : cnr/control/FakeRobotHW
   appenders      : [file, screen]
-  levels         : [trace, debug]
+  levels         : [debug, debug]
   pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%50M:%04L][%24c] %m%n"
   file_name      : "coe_hw"
   sampling_period: 0.001
@@ -16,4 +16,3 @@ coe_hw:
   tool_link: ur5_tool0
   robot_description_param: /robot_description
   robot_description_planning_param: /robot_description_planning
-
