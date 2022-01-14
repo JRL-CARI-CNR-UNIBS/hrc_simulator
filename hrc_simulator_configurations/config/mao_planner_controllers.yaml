@@ -27,6 +27,7 @@ mao_planner_hw:
     type: "cnr/control/ScaledFJTPosController"
     controlled_joints: all
     continuity_order: 1
+    check_tolerance: false # optional (default=true). if true, goal ends when the joint states and targets are in tolerance. Use false
     overrides:
     - safe_ovr_mao
 
