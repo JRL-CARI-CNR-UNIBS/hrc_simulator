@@ -10,6 +10,7 @@ Panels:
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
         - /Marker2
+        - /SAFETY1
       Splitter Ratio: 0.7425600290298462
     Tree Height: 167
   - Class: rviz/Help
@@ -612,6 +613,31 @@ Visualization Manager:
         {}
       Queue Size: 100
       Value: true
+    - Buffer length: 100
+      Class: jsk_rviz_plugin/Plotter2D
+      Enabled: true
+      Name: SAFETY
+      Show Value: true
+      Topic: /safe_ovr_1_float
+      Value: true
+      auto color change: false
+      auto scale: true
+      background color: 0; 0; 0
+      backround alpha: 0
+      border: true
+      foreground alpha: 0.699999988079071
+      foreground color: 25; 255; 240
+      height: 100
+      left: 1
+      linewidth: 1
+      max color: 255; 0; 0
+      max value: 1
+      min value: -1
+      show caption: true
+      text size: 12
+      top: 1
+      update interval: 0.03999999910593033
+      width: 100
   Enabled: true
   Global Options:
     Background Color: 211; 215; 207
@@ -628,7 +654,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 7.161069869995117
+      Distance: 3.6329562664031982
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -644,9 +670,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4597965180873871
+      Pitch: 0.6447966694831848
       Target Frame: world
-      Yaw: 4.3072638511657715
+      Yaw: 1.8040844202041626
     Saved: ~
 Window Geometry:
   ConfigurationManager:

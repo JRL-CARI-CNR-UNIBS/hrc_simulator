@@ -43,7 +43,7 @@
   <rosparam param="publish_frequency">125</rosparam>
 </node>
 
-
+<!--
 <node launch-prefix="$(arg launch_prefix)"
       pkg="cnr_configuration_manager"
       type="cnr_configuration_manager_node"
@@ -51,13 +51,31 @@
 
   <rosparam>
     appenders: [screen,file]
-    levels: [info,info]
+    levels: [info,trace]
     file_name: "aaa"
     append_to_file: true
     pattern_layout: "[%5p][%d{HH:mm:ss,SSS}][%M:%04L][%c] %m%n"
   </rosparam>
 
   <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
+</node> -->
+
+
+<node pkg="cnr_configuration_manager"
+      type="cnr_configuration_manager_node"
+      name="configuration_manager" output="screen">
+
+  <rosparam>
+    appenders: [screen,file]
+    levels: [info,trace]
+    file_name: "configuration_manager"
+    append_to_file: true
+    pattern_layout: "[%5p][%d{HH:mm:ss,SSS}][%M:%04L][%c] %m%n"
+  </rosparam>
+
+  <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
+<param name="num_worker_threads" value="40" />
+
 </node>
 
 

@@ -1,7 +1,7 @@
 planner_hw:
   type           : "cnr/control/TopicsRobotHW"
   appenders      : [file, screen]
-  levels         : [debug, debug]
+  levels         : [trace, info]
   pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%50M:%04L][%24c] %m%n"
   file_name      : "planner_hw"
 
@@ -34,3 +34,4 @@ planner_hw:
   tool_link: ur5_tool0
   robot_description_param: /robot_description
   robot_description_planning_param: /robot_description_planning
+  kin_update_period: 0.008
