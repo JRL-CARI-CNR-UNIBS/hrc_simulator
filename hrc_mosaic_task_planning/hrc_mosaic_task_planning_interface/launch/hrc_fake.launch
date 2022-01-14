@@ -9,21 +9,20 @@
   <arg name="hrc" default="false"/>
   <arg name="starting_recipe" default="0"/>
 
+  <arg name="mongo_database" default="test_mosaic"/>
+  <arg name="mongo_collection_tasks" default="tasks_properties"/>
+  <arg name="mongo_collection_results" default="tasks_results"/>
+
   <param name="starting_recipe_number" value="$(arg starting_recipe)"/>
 
   <!-- <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_mosaic_full.yaml" /> -->
-  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_mosaic_3x3.yaml" />
+  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_5x10.yaml" />
   <param name="recipe" value="$(arg recipe)" />
 
   <!-- If recipe_path is set, all the recipes in folder "recipe_path" are executed (only if platinum=false, see below) -->
 
-  <arg name="mongo_database" default="test_mosaic"/>
   <param name="mongo_database" value="$(arg mongo_database)"/>
-
-  <arg name="mongo_collection_tasks" default="tasks_properties"/>
   <param name="mongo_collection_tasks" value="$(arg mongo_collection_tasks)"/>
-
-  <arg name="mongo_collection_results" default="tasks_results"/>
   <param name="mongo_collection_results" value="$(arg mongo_collection_results)"/>
 
   <!--<arg name="recipe_path" default="$(find task_planner_interface)/plans/multi-obj/v4/" />

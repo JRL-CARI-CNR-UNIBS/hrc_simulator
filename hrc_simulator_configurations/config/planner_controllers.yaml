@@ -31,7 +31,7 @@ planner_hw:
     continuity_order: 1
     goal_tolerance: 0.0001 # optional (default=0.001). it you be a scalar or any array with a value for each joint
     #path_tolerance: 0.001 # optional (default=0.001). it you be a scalar or any array with a value for each joint
-    check_tolerance: true # optional (default=true). if true, goal ends when the joint states and targets are in tolerance. Use false
+    check_tolerance: false # optional (default=true). if true, goal ends when the joint states and targets are in tolerance. Use false
 
   joint_teleop:
     type: cnr/control/JointTeleopController

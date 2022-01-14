@@ -5,10 +5,14 @@ if __name__ == '__main__':
 
     from pymongo import MongoClient
     import statistics
+    import pandas as pd
+    import seaborn as sns
 
     client = MongoClient()
-    db = client.test_mosaic
-    collections = [db.baseline_mosaic_2x2, db.proposed_mosaic_2x2] #MODIFY NAMES
+    db = client.sharework
+    collections = [db.results_tamp_baseline, db.results_tamp_multi_obj] #MODIFY NAMES
+
+    planners = ["FEASIBLE", "OPTIMIZED"]
 
     stopping_times_all = [ [33.5, 47.8, 43.9, 49.5, 49.6, 37.3, 92, 46.6, 32.4, 88.5, 61.6, 34.8, 106, 61, 59.8, 28.9, 64.7, 50.3, 47.7, 58.2],
                            [100,  68.7, 73.2, 76.6, 75.5, 106, 102, 92.9, 71.6, 81.1, 65.9, 75.3, 87.7, 97, 76.8, 101, 79.3, 88.4, 87.6, 88.6] ]
@@ -40,7 +44,7 @@ if __name__ == '__main__':
 
         temp=[]
         for skill in robot_skills:
-            temp.append(skill["recipe"])
+            temp.append(skill["recipe_name"])
         recipe_names=list(set(temp))
         recipe_names=sorted(recipe_names)
 
@@ -101,12 +105,26 @@ if __name__ == '__main__':
         idle_times_array.append(idle_times_aggr)
         concurrent_work_array.append(concurrent_work_aggr)
 
-    titles = ["Execution Time [s]", "Idle Time [% of Execution Time]", "Concurrent Work [% of Execution Time]"]
+    planners_array = []
+    ex_array = []
+    idle_array = []
+    concurrent_array = []
+
+    for pl, el_ex, el_idle, el_conc in zip(planners, cycle_times_array, idle_times_array, concurrent_work_array):
+        planners_array += len(el_ex) * [pl]
+        ex_array += el_ex
+        idle_array += el_idle
+        concurrent_array += el_conc
+
+    print(planners_array)
+    dataset = pd.DataFrame({'planner': planners_array, 'exec_time': ex_array, 'idle_time': idle_array, 'concurrent_time': concurrent_array})
+
+    titles = ["Execution time [s]", "Idle time [% of Execution Time]", "Concurrent work [% of Execution time]"]
     datas = [cycle_times_array, idle_times_array, concurrent_work_array]
-    xlabels = ["FEASIBLE", "OPTIMIZED"]
+    xlabels = planners
     medianprops = dict(color="navy", linewidth=1.5)
 
-    fig, axes = plt.subplots(nrows=1, ncols=len(datas), figsize=(15, 3.5))
+    fig, axes = plt.subplots(nrows=1, ncols=len(datas), figsize=(15, 3))
     # notch shape box plot
     for ax, title, data in zip(axes, titles, datas):
         print(title)
@@ -142,6 +160,25 @@ if __name__ == '__main__':
     #         patch.set_facecolor(color)
     # for ax in axes:
     #     ax.yaxis.grid(True)
+
+    fig, axes = plt.subplots(nrows=1, ncols=len(titles), figsize=(15, 3))
+    # notch shape box plot
+    for ax, title in zip(axes, titles):
+        print(title)
+        if title=="Execution time [s]":
+            sns.barplot(ax=ax, x="planner", y="exec_time", data=dataset, palette="rocket")
+        elif title=="Idle time [% of Execution Time]":
+            sns.barplot(ax=ax, x="planner", y="idle_time", data=dataset, palette="rocket")
+        elif title=="Concurrent work [% of Execution time]":
+            tmp_db=dataset[dataset.planner!="PRE-COMPUTED"]
+            sns.barplot(ax=ax, x="planner", y="concurrent_time", data=dataset, palette="rocket")
+        ax.set_title(title)
+        #ax.legend(title='', loc='upper left')
+        ax.yaxis.grid(True)
+        ax.set_xlabel("")
+        ax.set_ylabel("")
+        ax.set_axisbelow(True)
+
     plt.savefig('./figure_tamp.pdf', format='pdf')
 
     plt.show()
