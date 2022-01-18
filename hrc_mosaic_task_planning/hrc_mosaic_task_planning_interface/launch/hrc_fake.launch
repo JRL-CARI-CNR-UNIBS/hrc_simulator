@@ -16,7 +16,7 @@
   <param name="starting_recipe_number" value="$(arg starting_recipe)"/>
 
   <!-- <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_mosaic_full.yaml" /> -->
-  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_5x10.yaml" />
+  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_4x4.yaml" />
   <param name="recipe" value="$(arg recipe)" />
 
   <!-- If recipe_path is set, all the recipes in folder "recipe_path" are executed (only if platinum=false, see below) -->
