@@ -2,22 +2,31 @@
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gazebo_gui" default="true"/>
-  <arg name="urdf_path" default="$(find hrc_simulator_descriptions)/urdf/hrc_simulator.xacro"/>
+  <arg name="initial_joint_positions" doc="Initial joint configuration of the robot"
+       default=" -J Belly_rotx 0 -J Belly_roty 0 -J jLeftElbow_rotz 0 -J jLeftShoulder_rotx -1.2757 -J jLeftShoulder_roty 0 -J jLeftShoulder_rotz 0 -J jRightElbow_rotz 0.8765 -J jRightShoulder_rotx 0.0087 -J jRightShoulder_roty 0.3385 -J jRightShoulder_rotz 0.7507 -J jRightWristPitch -0.0174 -J jRightWristRoll 0.3645 -J jRightWristYaw -0.1562 -J joint_orientation 0 -J joint_traslx 0.0552 -J joint_trasly 0 -J linear_motor_cursor_joint 0 -J ur5_elbow_joint 0 -J ur5_shoulder_lift_joint -1.5708 -J ur5_shoulder_pan_joint 0.1215 -J ur5_wrist_1_joint 0 -J ur5_wrist_2_joint 0 -J ur5_wrist_3_joint 0"/>
 
   <!-- startup simulated world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" default="worlds/empty.world"/>
-    <arg name="paused" value="$(arg paused)"/>
+    <arg name="paused" value="true"/>
     <arg name="gui" value="$(arg gazebo_gui)"/>
   </include>
 
   <!-- send robot urdf to param server -->
-  <param name="robot_description" textfile="$(arg urdf_path)" />
+  <param name="robot_description" command="xacro  '$(find hrc_simulator_descriptions)/urdf/hrc_simulator.xacro'" />
 
+  <!-- unpause only after loading robot model -->
+  <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />
   <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
-  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0"
+  <arg name="world_pose" value="-x 0 -y 0 -z 0" />
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot $(arg unpause) $(arg world_pose) $(arg initial_joint_positions)"
     respawn="false" output="screen" />
 
-  <include file="$(find hrc_simulator_moveit_config)/launch/ros_controllers.launch"/>
+  <!-- Load joint controller parameters for Gazebo -->
+  <rosparam file="$(find hrc_simulator_moveit_config)/config/gazebo_controllers.yaml" />
+  <!-- Spawn Gazebo ROS controllers -->
+  <node name="gazebo_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_state_controller" />
+  <!-- Load ROS controllers -->
+  <include file="$(dirname)/ros_controllers.launch"/>
 
 </launch>
