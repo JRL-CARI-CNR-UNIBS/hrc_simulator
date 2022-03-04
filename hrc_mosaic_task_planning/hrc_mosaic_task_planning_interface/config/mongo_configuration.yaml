@@ -1,0 +1,5 @@
+mongo_database: "sharework"
+mongo_collection_tasks: "hrc_task_properties"
+mongo_collection_results: "results_test"
+coll_risk_name: "hrc_dynamic_risks"
+coll_duration_name: "hrc_task_durations"
