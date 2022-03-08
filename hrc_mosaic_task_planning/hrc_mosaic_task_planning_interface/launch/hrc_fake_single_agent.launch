@@ -17,7 +17,7 @@
 
 
 <!-- launch-prefix="gdb -ex run meno meno args" -->
-  <node name="$(arg agent_node)" pkg="task_planner_interface" type="robot_node" output="screen" >
+  <node name="$(arg agent_node)" pkg="task_planner_interface" type="task_executor_node" output="screen" >
     <param name="topic_request_from_planner" value="$(arg topic_request_from_planner)" />
     <param name="group_name" value="$(arg group_name)" />
     <param name="home_position" value="$(arg home_position)" />
