@@ -13,7 +13,7 @@
 
   <param name="prefix" value="$(arg prefix)" />
 
-  <node name="task_planner_interface" pkg="task_planner_interface" type="taskServiceManager.py"  output="screen" />
+  <node name="task_service_manager" pkg="task_planner_interface" type="taskServiceManager.py"  output="screen" />
 
 
 </launch>

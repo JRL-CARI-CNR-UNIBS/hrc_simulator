@@ -1,6 +1,5 @@
 controller_list:
   - name: fake_ur5_on_guide_controller
-    type: $(arg fake_execution_type)
     joints:
       - linear_motor_cursor_joint
       - ur5_shoulder_pan_joint
@@ -10,7 +9,6 @@ controller_list:
       - ur5_wrist_2_joint
       - ur5_wrist_3_joint
   - name: fake_human_right_arm_controller
-    type: $(arg fake_execution_type)
     joints:
       - joint_traslx
       - joint_trasly
@@ -25,16 +23,8 @@ controller_list:
       - jRightWristPitch
       - jRightWristYaw
   - name: fake_human_left_arm_controller
-    type: $(arg fake_execution_type)
     joints:
       - jLeftShoulder_rotx
       - jLeftShoulder_roty
       - jLeftShoulder_rotz
       - jLeftElbow_rotz
-initial:  # Define initial robot poses per group
-  - group: ur5_on_guide
-    pose: up
-  - group: human_right_arm
-    pose: r_home
-  - group: human_left_arm
-    pose: left_home

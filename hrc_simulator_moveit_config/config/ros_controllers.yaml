@@ -1,0 +1,40 @@
+controller_list:
+  - name: ur5_on_guide
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - linear_motor_cursor_joint
+      - ur5_shoulder_pan_joint
+      - ur5_shoulder_lift_joint
+      - ur5_elbow_joint
+      - ur5_wrist_1_joint
+      - ur5_wrist_2_joint
+      - ur5_wrist_3_joint
+  - name: human_right_arm
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+    - joint_traslx
+    - joint_trasly
+    - joint_orientation
+    - Belly_rotx
+    - Belly_roty
+    - jRightShoulder_rotx
+    - jRightShoulder_roty
+    - jRightShoulder_rotz
+    - jRightElbow_roty
+    - jRightElbow_rotz
+    - jRightWristRoll
+    - jRightWristPitch
+    - jRightWristYaw
+  - name: human_left_arm
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+    - jLeftShoulder_rotx
+    - jLeftShoulder_roty
+    - jLeftShoulder_rotz
+    - jLeftElbow_rotz
