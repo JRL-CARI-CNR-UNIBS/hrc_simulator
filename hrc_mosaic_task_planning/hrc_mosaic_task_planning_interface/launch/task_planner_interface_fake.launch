@@ -16,9 +16,13 @@
   <arg name="robot_request_from_planner" value="$(arg prefix)/motion" />
   <arg name="human_request_from_planner" value="$(arg prefix)/human" />
 
+  <arg name="is_human_real" default="false" />
+
   <!-- LOAD PARAMETERS ABOUT AGENTS -->
   <rosparam if="$(arg hrc)" command="load" file="$(find hrc_mosaic_task_planning_interface)/config/multiple_agents.yaml" />
   <rosparam unless="$(arg hrc)"  command="load" file="$(find hrc_mosaic_task_planning_interface)/config/single_agents.yaml" />
+
+  <param name="is_human_real" value="$(arg is_human_real)"/>
 
   <!-- TASK PLANNER INTERFACE NODE-->
   <include file="$(find hrc_mosaic_task_planning_interface)/launch/task_service_manager.launch" >

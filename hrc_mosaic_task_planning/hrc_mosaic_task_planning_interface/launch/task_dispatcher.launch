@@ -11,10 +11,16 @@
   <arg name="robot_feedback_to_planner" default="$(arg prefix)/motion/feedback" />
   <arg name="human_feedback_to_planner" default="$(arg prefix)/human/feedback" />
 
-  <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/test_samuele.yaml" />
+  <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_3x3.yaml" /> -->
+  <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/test_samuele.yaml" /> -->
+  <arg name="recipe_path" value="$(find hrc_mosaic_task_planning_interface)/plans/agents_synergy/training/" />
+  <param name="recipe_path" value="$(arg recipe_path)" />
+
+  <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/agents_synergy/training/recipe_1.yaml" /> -->
+
   <arg name="autosync" default="false" />
 
-  <param name="recipe" value="$(arg recipe)" />
+  <!-- <param name="recipe" value="$(arg recipe)" /> -->
   <param name="autosync" value="$(arg autosync)" />
 
   <node unless="$(arg hrc)" name="task_planner_dispatcher" pkg="task_planner_dispatcher" type="dispatcher_single" output="screen" >

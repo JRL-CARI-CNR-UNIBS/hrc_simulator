@@ -42,6 +42,7 @@
 
   <include if="$(arg hrc)" file="$(find hrc_mosaic_task_planning_interface)/launch/human_real_executor.launch" >
       <arg name="agent_node" value="human_task_executor" />
+      <arg name="group_name" value="$(arg group_name_human)" />
       <arg name="topic_request_from_planner" value="$(arg human_request_from_planner)"/>
   </include>
 
