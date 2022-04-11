@@ -14,6 +14,15 @@
           <color rgba="0.4 0.4 0.4 1.0"/>
         </material>
       </visual>
+      <collision>
+        <origin xyz="1 0.0 -0.1" rpy="0 0 0" />
+        <geometry>
+          <box size="2.2 0.3 0.2"/>
+        </geometry>
+        <material name="DarkGrey">
+          <color rgba="0.4 0.4 0.4 1.0"/>
+        </material>
+      </collision>
       <inertial>
           <origin xyz="0 0 0" rpy="0 0 0" />
           <mass value="1" />
