@@ -35,7 +35,7 @@
   <include file="$(find hrc_mosaic_task_planning_interface)/launch/mongo_handler.launch" />
 
   <!-- AGENTS NODES -->
-  <include file="$(find hrc_mosaic_task_planning_interface)/launch/robot_executor.launch" >
+  <include file="$(find hrc_mosaic_task_planning_interface)/launch/robot_executor.launch">
       <arg name="group_name" value="$(arg group_name_robot)" />
       <arg name="agent_node" value="robot_task_executor" />
       <arg name="home_position" value="ur5_home"/>

@@ -13,8 +13,11 @@
 
   <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_3x3.yaml" /> -->
   <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/test_samuele.yaml" /> -->
-  <arg name="recipe_path" value="$(find hrc_mosaic_task_planning_interface)/plans/agents_synergy/training/" />
+  <arg name="recipe_path" value="$(find hrc_mosaic_task_planning_interface)/plans/agents_synergy/training_test/" />
   <param name="recipe_path" value="$(arg recipe_path)" />
+
+  <arg name="starting_recipe" default="0"/>
+  <param name="starting_recipe_number" value="$(arg starting_recipe)"/>
 
   <!-- <arg name="recipe" default="$(find hrc_mosaic_task_planning_interface)/plans/agents_synergy/training/recipe_1.yaml" /> -->
 

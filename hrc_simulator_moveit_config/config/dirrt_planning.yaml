@@ -6,7 +6,7 @@ group_names_map:
 mg1:
   type: Multigoal
   max_distance: 0.5
-  max_refine_time: 1500.0
+  max_refine_time: 2.0 # 1500.0  # 2
   rewire_radius: 2.0
   extend: true
   local_bias: 0.25
@@ -17,7 +17,7 @@ mg1:
 mg1_mao:
   type: Multigoal
   max_distance: 0.5
-  max_refine_time: 1500.0
+  max_refine_time: 2.0 # 1500.0   # 2
   rewire_radius: 2.0
   extend: true
   local_bias: 0.25

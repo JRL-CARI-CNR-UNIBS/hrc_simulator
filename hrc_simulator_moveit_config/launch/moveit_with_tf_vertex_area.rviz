@@ -1,0 +1,1767 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 84
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /MotionPlanning1
+        - /MotionPlanning1/Planned Path1
+        - /TF1
+        - /TF1/Frames1
+        - /Static Transform Publisher1
+        - /Static Transform Publisher1/publish transform1
+        - /Static Transform Publisher2
+        - /Static Transform Publisher2/publish transform1
+        - /Static Transform Publisher3
+        - /Static Transform Publisher3/publish transform1
+        - /Static Transform Publisher4/publish transform1
+        - /Static Transform Publisher5/publish transform1
+        - /Static Transform Publisher6/publish transform1
+      Splitter Ratio: 0.7425600290298462
+    Tree Height: 375
+  - Class: rviz/Help
+    Name: Help
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Acceleration_Scaling_Factor: 1
+      Class: moveit_rviz_plugin/MotionPlanning
+      Enabled: true
+      Move Group Namespace: ""
+      MoveIt_Allow_Approximate_IK: false
+      MoveIt_Allow_External_Program: false
+      MoveIt_Allow_Replanning: false
+      MoveIt_Allow_Sensor_Positioning: false
+      MoveIt_Planning_Attempts: 10
+      MoveIt_Planning_Time: 5
+      MoveIt_Use_Cartesian_Path: false
+      MoveIt_Use_Constraint_Aware_IK: true
+      MoveIt_Workspace:
+        Center:
+          X: 0
+          Y: 0
+          Z: 0
+        Size:
+          X: 2
+          Y: 2
+          Z: 2
+      Name: MotionPlanning
+      Planned Path:
+        Color Enabled: false
+        Interrupt Display: false
+        Links:
+          All Links Enabled: true
+          Belly:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Bellyf1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Bellyf2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Chest:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Head:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftForeArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftForeArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          LeftHand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftUpperArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftUpperArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          LeftUpperArm_f2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Link Tree Style: Links in Alphabetic Order
+          Neck:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Pelvis:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightForeArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightForeArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightHand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightTip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightUpperArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightUpperArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightUpperArm_f2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightWristX:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightWristY:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          conveyor_system:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          elmo_linear_guide_cursor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          elmo_linear_guide_stator:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fake:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fake2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          floor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          origin_human14dof:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          shopdesk:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          table:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tabletop:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_base_link_inertia:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_flange:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_1_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_2_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_3_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall_conveyeor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+        Loop Animation: false
+        Robot Alpha: 0.5
+        Robot Color: 150; 50; 150
+        Show Robot Collision: false
+        Show Robot Visual: true
+        Show Trail: false
+        State Display Time: 0.05 s
+        Trail Step Size: 1
+        Trajectory Topic: move_group/display_planned_path
+        Use Sim Time: false
+      Planning Metrics:
+        Payload: 1
+        Show Joint Torques: false
+        Show Manipulability: false
+        Show Manipulability Index: false
+        Show Weight Limit: false
+        TextHeight: 0.07999999821186066
+      Planning Request:
+        Colliding Link Color: 255; 0; 0
+        Goal State Alpha: 1
+        Goal State Color: 250; 128; 0
+        Interactive Marker Size: 0
+        Joint Violation Color: 255; 0; 255
+        Planning Group: human_right_arm
+        Query Goal State: true
+        Query Start State: false
+        Show Workspace: false
+        Start State Alpha: 1
+        Start State Color: 0; 255; 0
+      Planning Scene Topic: move_group/monitored_planning_scene
+      Robot Description: robot_description
+      Scene Geometry:
+        Scene Alpha: 1
+        Scene Color: 50; 230; 50
+        Scene Display Time: 0.20000000298023224
+        Show Scene Geometry: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
+      Scene Robot:
+        Attached Body Color: 150; 50; 150
+        Links:
+          All Links Enabled: true
+          Belly:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Bellyf1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Bellyf2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Chest:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Head:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftForeArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftForeArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          LeftHand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftUpperArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          LeftUpperArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          LeftUpperArm_f2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          Link Tree Style: Links in Alphabetic Order
+          Neck:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          Pelvis:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightForeArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightForeArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightHand:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightTip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightUpperArm:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          RightUpperArm_f1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightUpperArm_f2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightWristX:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          RightWristY:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          conveyor_system:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          elmo_linear_guide_cursor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          elmo_linear_guide_stator:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          fake:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          fake2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          floor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          origin_human14dof:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          shopdesk:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          table:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tabletop:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          tip:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_base:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_base_link_inertia:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_flange:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_tool0:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          ur5_upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_1_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_2_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          ur5_wrist_3_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall3:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          wall_conveyeor:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          world:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+        Robot Alpha: 0.5
+        Show Robot Collision: false
+        Show Robot Visual: true
+      Value: true
+      Velocity_Scaling_Factor: 1
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        AH1:
+          Value: false
+        AH1_approach:
+          Value: false
+        AH1_leave:
+          Value: false
+        AH2:
+          Value: false
+        AH2_approach:
+          Value: false
+        AH2_leave:
+          Value: false
+        AH3:
+          Value: false
+        AH3_approach:
+          Value: false
+        AH3_leave:
+          Value: false
+        AR1:
+          Value: false
+        AR1_approach:
+          Value: false
+        AR1_leave:
+          Value: false
+        AR2:
+          Value: false
+        AR2_approach:
+          Value: false
+        AR2_leave:
+          Value: false
+        AR3:
+          Value: false
+        AR3_approach:
+          Value: false
+        AR3_leave:
+          Value: false
+        All Enabled: false
+        BH1:
+          Value: false
+        BH1_approach:
+          Value: false
+        BH1_leave:
+          Value: false
+        BH2:
+          Value: false
+        BH2_approach:
+          Value: false
+        BH2_leave:
+          Value: false
+        BH3:
+          Value: false
+        BH3_approach:
+          Value: false
+        BH3_leave:
+          Value: false
+        BR1:
+          Value: false
+        BR1_approach:
+          Value: false
+        BR1_leave:
+          Value: false
+        BR2:
+          Value: false
+        BR2_approach:
+          Value: false
+        BR2_leave:
+          Value: false
+        BR3:
+          Value: false
+        BR3_approach:
+          Value: false
+        BR3_leave:
+          Value: false
+        Belly:
+          Value: false
+        Bellyf1:
+          Value: false
+        Bellyf2:
+          Value: false
+        Chest:
+          Value: false
+        Head:
+          Value: false
+        LeftForeArm:
+          Value: false
+        LeftForeArm_f1:
+          Value: false
+        LeftHand:
+          Value: false
+        LeftUpperArm:
+          Value: false
+        LeftUpperArm_f1:
+          Value: false
+        LeftUpperArm_f2:
+          Value: false
+        Neck:
+          Value: false
+        Pelvis:
+          Value: false
+        RightForeArm:
+          Value: false
+        RightForeArm_f1:
+          Value: false
+        RightHand:
+          Value: false
+        RightTip:
+          Value: false
+        RightUpperArm:
+          Value: false
+        RightUpperArm_f1:
+          Value: false
+        RightUpperArm_f2:
+          Value: false
+        RightWristX:
+          Value: false
+        RightWristY:
+          Value: false
+        common_desk1:
+          Value: false
+        common_desk1_approach:
+          Value: false
+        common_desk1_leave:
+          Value: false
+        conveyor_system:
+          Value: false
+        elmo_linear_guide_cursor:
+          Value: false
+        elmo_linear_guide_stator:
+          Value: false
+        fake:
+          Value: false
+        fake2:
+          Value: false
+        floor:
+          Value: false
+        human_away:
+          Value: false
+        human_away_approach:
+          Value: false
+        human_away_leave:
+          Value: false
+        human_desk:
+          Value: false
+        human_desk_approach:
+          Value: false
+        human_desk_leave:
+          Value: false
+        human_home:
+          Value: false
+        human_home_approach:
+          Value: false
+        human_home_leave:
+          Value: false
+        manipulation/blue_box/n_0:
+          Value: false
+        manipulation/blue_box/n_0/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_0/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_0/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_0/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_0/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_0/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_0/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_0/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_0/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_0/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_0/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_0/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_1:
+          Value: false
+        manipulation/blue_box/n_1/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_1/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_1/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_1/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_1/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_1/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_1/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_1/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_1/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_1/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_1/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_1/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_2:
+          Value: false
+        manipulation/blue_box/n_2/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_2/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_2/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_2/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_2/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_2/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_2/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_2/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_2/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_2/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_2/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_2/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_3:
+          Value: false
+        manipulation/blue_box/n_3/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_3/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_3/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_3/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_3/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_3/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_3/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_3/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_3/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_3/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_3/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_3/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_4:
+          Value: false
+        manipulation/blue_box/n_4/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_4/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_4/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_4/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_4/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_4/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_4/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_4/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_4/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_4/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_4/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_4/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_5:
+          Value: false
+        manipulation/blue_box/n_5/grasp_0_tip:
+          Value: false
+        manipulation/blue_box/n_5/grasp_0_tip_approach:
+          Value: false
+        manipulation/blue_box/n_5/grasp_0_tip_leave:
+          Value: false
+        manipulation/blue_box/n_5/grasp_1_tip:
+          Value: false
+        manipulation/blue_box/n_5/grasp_1_tip_approach:
+          Value: false
+        manipulation/blue_box/n_5/grasp_1_tip_leave:
+          Value: false
+        manipulation/blue_box/n_5/grasp_2_RightTip:
+          Value: false
+        manipulation/blue_box/n_5/grasp_2_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_5/grasp_2_RightTip_leave:
+          Value: false
+        manipulation/blue_box/n_5/grasp_3_RightTip:
+          Value: false
+        manipulation/blue_box/n_5/grasp_3_RightTip_approach:
+          Value: false
+        manipulation/blue_box/n_5/grasp_3_RightTip_leave:
+          Value: false
+        manipulation/orange_box/n_0:
+          Value: false
+        manipulation/orange_box/n_0/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_0/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_0/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_0/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_0/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_0/grasp_1_tip_leave:
+          Value: false
+        manipulation/orange_box/n_1:
+          Value: false
+        manipulation/orange_box/n_1/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_1/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_1/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_1/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_1/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_1/grasp_1_tip_leave:
+          Value: false
+        manipulation/orange_box/n_2:
+          Value: false
+        manipulation/orange_box/n_2/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_2/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_2/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_2/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_2/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_2/grasp_1_tip_leave:
+          Value: false
+        manipulation/orange_box/n_3:
+          Value: false
+        manipulation/orange_box/n_3/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_3/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_3/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_3/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_3/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_3/grasp_1_tip_leave:
+          Value: false
+        manipulation/orange_box/n_4:
+          Value: false
+        manipulation/orange_box/n_4/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_4/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_4/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_4/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_4/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_4/grasp_1_tip_leave:
+          Value: false
+        manipulation/orange_box/n_5:
+          Value: false
+        manipulation/orange_box/n_5/grasp_0_tip:
+          Value: false
+        manipulation/orange_box/n_5/grasp_0_tip_approach:
+          Value: false
+        manipulation/orange_box/n_5/grasp_0_tip_leave:
+          Value: false
+        manipulation/orange_box/n_5/grasp_1_tip:
+          Value: false
+        manipulation/orange_box/n_5/grasp_1_tip_approach:
+          Value: false
+        manipulation/orange_box/n_5/grasp_1_tip_leave:
+          Value: false
+        manipulation/white_box/n_0:
+          Value: false
+        manipulation/white_box/n_0/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_0/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_0/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_0/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_0/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_0/grasp_1_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_1:
+          Value: false
+        manipulation/white_box/n_1/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_1/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_1/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_1/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_1/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_1/grasp_1_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_2:
+          Value: false
+        manipulation/white_box/n_2/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_2/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_2/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_2/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_2/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_2/grasp_1_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_3:
+          Value: false
+        manipulation/white_box/n_3/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_3/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_3/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_3/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_3/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_3/grasp_1_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_4:
+          Value: false
+        manipulation/white_box/n_4/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_4/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_4/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_4/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_4/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_4/grasp_1_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_5:
+          Value: false
+        manipulation/white_box/n_5/grasp_0_RightTip:
+          Value: false
+        manipulation/white_box/n_5/grasp_0_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_5/grasp_0_RightTip_leave:
+          Value: false
+        manipulation/white_box/n_5/grasp_1_RightTip:
+          Value: false
+        manipulation/white_box/n_5/grasp_1_RightTip_approach:
+          Value: false
+        manipulation/white_box/n_5/grasp_1_RightTip_leave:
+          Value: false
+        origin_human14dof:
+          Value: false
+        robot_desk1:
+          Value: false
+        robot_desk1_approach:
+          Value: false
+        robot_desk1_leave:
+          Value: false
+        robot_desk2:
+          Value: false
+        robot_desk2_approach:
+          Value: false
+        robot_desk2_leave:
+          Value: false
+        robot_desk3:
+          Value: false
+        robot_desk3_approach:
+          Value: false
+        robot_desk3_leave:
+          Value: false
+        robot_desk4:
+          Value: false
+        robot_desk4_approach:
+          Value: false
+        robot_desk4_leave:
+          Value: false
+        shopdesk:
+          Value: false
+        table:
+          Value: false
+        tabletop:
+          Value: false
+        tip:
+          Value: false
+        ur5_away:
+          Value: false
+        ur5_away_approach:
+          Value: false
+        ur5_away_leave:
+          Value: false
+        ur5_base:
+          Value: false
+        ur5_base_link:
+          Value: false
+        ur5_base_link_inertia:
+          Value: false
+        ur5_flange:
+          Value: false
+        ur5_forearm_link:
+          Value: false
+        ur5_home:
+          Value: false
+        ur5_home_approach:
+          Value: false
+        ur5_home_leave:
+          Value: false
+        ur5_shoulder_link:
+          Value: false
+        ur5_tool0:
+          Value: false
+        ur5_upper_arm_link:
+          Value: false
+        ur5_wrist_1_link:
+          Value: false
+        ur5_wrist_2_link:
+          Value: false
+        ur5_wrist_3_link:
+          Value: false
+        vertice_1:
+          Value: false
+        wall1:
+          Value: false
+        wall2:
+          Value: false
+        wall3:
+          Value: false
+        wall_conveyeor:
+          Value: false
+        world:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          conveyor_system:
+            AH1:
+              AH1_approach:
+                {}
+              AH1_leave:
+                {}
+            AH2:
+              AH2_approach:
+                {}
+              AH2_leave:
+                {}
+            AH3:
+              AH3_approach:
+                {}
+              AH3_leave:
+                {}
+            AR1:
+              AR1_approach:
+                {}
+              AR1_leave:
+                {}
+            AR2:
+              AR2_approach:
+                {}
+              AR2_leave:
+                {}
+            AR3:
+              AR3_approach:
+                {}
+              AR3_leave:
+                {}
+            BH1:
+              BH1_approach:
+                {}
+              BH1_leave:
+                {}
+            BH2:
+              BH2_approach:
+                {}
+              BH2_leave:
+                {}
+            BH3:
+              BH3_approach:
+                {}
+              BH3_leave:
+                {}
+            BR1:
+              BR1_approach:
+                {}
+              BR1_leave:
+                {}
+            BR2:
+              BR2_approach:
+                {}
+              BR2_leave:
+                {}
+            BR3:
+              BR3_approach:
+                {}
+              BR3_leave:
+                {}
+            common_desk1:
+              common_desk1_approach:
+                {}
+              common_desk1_leave:
+                {}
+            wall_conveyeor:
+              {}
+          elmo_linear_guide_stator:
+            elmo_linear_guide_cursor:
+              ur5_base_link:
+                ur5_base:
+                  {}
+                ur5_base_link_inertia:
+                  ur5_shoulder_link:
+                    ur5_upper_arm_link:
+                      ur5_forearm_link:
+                        ur5_wrist_1_link:
+                          ur5_wrist_2_link:
+                            ur5_wrist_3_link:
+                              ur5_flange:
+                                ur5_tool0:
+                                  tip:
+                                    {}
+          floor:
+            {}
+          human_away:
+            human_away_approach:
+              {}
+            human_away_leave:
+              {}
+          human_home:
+            human_home_approach:
+              {}
+            human_home_leave:
+              {}
+          manipulation/blue_box/n_0:
+            manipulation/blue_box/n_0/grasp_0_tip:
+              manipulation/blue_box/n_0/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_0/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_0/grasp_1_tip:
+              manipulation/blue_box/n_0/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_0/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_0/grasp_2_RightTip:
+              manipulation/blue_box/n_0/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_0/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_0/grasp_3_RightTip:
+              manipulation/blue_box/n_0/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_0/grasp_3_RightTip_leave:
+                {}
+          manipulation/blue_box/n_1:
+            manipulation/blue_box/n_1/grasp_0_tip:
+              manipulation/blue_box/n_1/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_1/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_1/grasp_1_tip:
+              manipulation/blue_box/n_1/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_1/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_1/grasp_2_RightTip:
+              manipulation/blue_box/n_1/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_1/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_1/grasp_3_RightTip:
+              manipulation/blue_box/n_1/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_1/grasp_3_RightTip_leave:
+                {}
+          manipulation/blue_box/n_2:
+            manipulation/blue_box/n_2/grasp_0_tip:
+              manipulation/blue_box/n_2/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_2/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_2/grasp_1_tip:
+              manipulation/blue_box/n_2/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_2/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_2/grasp_2_RightTip:
+              manipulation/blue_box/n_2/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_2/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_2/grasp_3_RightTip:
+              manipulation/blue_box/n_2/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_2/grasp_3_RightTip_leave:
+                {}
+          manipulation/blue_box/n_3:
+            manipulation/blue_box/n_3/grasp_0_tip:
+              manipulation/blue_box/n_3/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_3/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_3/grasp_1_tip:
+              manipulation/blue_box/n_3/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_3/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_3/grasp_2_RightTip:
+              manipulation/blue_box/n_3/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_3/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_3/grasp_3_RightTip:
+              manipulation/blue_box/n_3/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_3/grasp_3_RightTip_leave:
+                {}
+          manipulation/blue_box/n_4:
+            manipulation/blue_box/n_4/grasp_0_tip:
+              manipulation/blue_box/n_4/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_4/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_4/grasp_1_tip:
+              manipulation/blue_box/n_4/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_4/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_4/grasp_2_RightTip:
+              manipulation/blue_box/n_4/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_4/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_4/grasp_3_RightTip:
+              manipulation/blue_box/n_4/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_4/grasp_3_RightTip_leave:
+                {}
+          manipulation/blue_box/n_5:
+            manipulation/blue_box/n_5/grasp_0_tip:
+              manipulation/blue_box/n_5/grasp_0_tip_approach:
+                {}
+              manipulation/blue_box/n_5/grasp_0_tip_leave:
+                {}
+            manipulation/blue_box/n_5/grasp_1_tip:
+              manipulation/blue_box/n_5/grasp_1_tip_approach:
+                {}
+              manipulation/blue_box/n_5/grasp_1_tip_leave:
+                {}
+            manipulation/blue_box/n_5/grasp_2_RightTip:
+              manipulation/blue_box/n_5/grasp_2_RightTip_approach:
+                {}
+              manipulation/blue_box/n_5/grasp_2_RightTip_leave:
+                {}
+            manipulation/blue_box/n_5/grasp_3_RightTip:
+              manipulation/blue_box/n_5/grasp_3_RightTip_approach:
+                {}
+              manipulation/blue_box/n_5/grasp_3_RightTip_leave:
+                {}
+          manipulation/orange_box/n_0:
+            manipulation/orange_box/n_0/grasp_0_tip:
+              manipulation/orange_box/n_0/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_0/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_0/grasp_1_tip:
+              manipulation/orange_box/n_0/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_0/grasp_1_tip_leave:
+                {}
+          manipulation/orange_box/n_1:
+            manipulation/orange_box/n_1/grasp_0_tip:
+              manipulation/orange_box/n_1/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_1/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_1/grasp_1_tip:
+              manipulation/orange_box/n_1/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_1/grasp_1_tip_leave:
+                {}
+          manipulation/orange_box/n_2:
+            manipulation/orange_box/n_2/grasp_0_tip:
+              manipulation/orange_box/n_2/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_2/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_2/grasp_1_tip:
+              manipulation/orange_box/n_2/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_2/grasp_1_tip_leave:
+                {}
+          manipulation/orange_box/n_3:
+            manipulation/orange_box/n_3/grasp_0_tip:
+              manipulation/orange_box/n_3/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_3/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_3/grasp_1_tip:
+              manipulation/orange_box/n_3/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_3/grasp_1_tip_leave:
+                {}
+          manipulation/orange_box/n_4:
+            manipulation/orange_box/n_4/grasp_0_tip:
+              manipulation/orange_box/n_4/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_4/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_4/grasp_1_tip:
+              manipulation/orange_box/n_4/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_4/grasp_1_tip_leave:
+                {}
+          manipulation/orange_box/n_5:
+            manipulation/orange_box/n_5/grasp_0_tip:
+              manipulation/orange_box/n_5/grasp_0_tip_approach:
+                {}
+              manipulation/orange_box/n_5/grasp_0_tip_leave:
+                {}
+            manipulation/orange_box/n_5/grasp_1_tip:
+              manipulation/orange_box/n_5/grasp_1_tip_approach:
+                {}
+              manipulation/orange_box/n_5/grasp_1_tip_leave:
+                {}
+          manipulation/white_box/n_0:
+            manipulation/white_box/n_0/grasp_0_RightTip:
+              manipulation/white_box/n_0/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_0/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_0/grasp_1_RightTip:
+              manipulation/white_box/n_0/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_0/grasp_1_RightTip_leave:
+                {}
+          manipulation/white_box/n_1:
+            manipulation/white_box/n_1/grasp_0_RightTip:
+              manipulation/white_box/n_1/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_1/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_1/grasp_1_RightTip:
+              manipulation/white_box/n_1/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_1/grasp_1_RightTip_leave:
+                {}
+          manipulation/white_box/n_2:
+            manipulation/white_box/n_2/grasp_0_RightTip:
+              manipulation/white_box/n_2/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_2/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_2/grasp_1_RightTip:
+              manipulation/white_box/n_2/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_2/grasp_1_RightTip_leave:
+                {}
+          manipulation/white_box/n_3:
+            manipulation/white_box/n_3/grasp_0_RightTip:
+              manipulation/white_box/n_3/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_3/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_3/grasp_1_RightTip:
+              manipulation/white_box/n_3/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_3/grasp_1_RightTip_leave:
+                {}
+          manipulation/white_box/n_4:
+            manipulation/white_box/n_4/grasp_0_RightTip:
+              manipulation/white_box/n_4/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_4/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_4/grasp_1_RightTip:
+              manipulation/white_box/n_4/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_4/grasp_1_RightTip_leave:
+                {}
+          manipulation/white_box/n_5:
+            manipulation/white_box/n_5/grasp_0_RightTip:
+              manipulation/white_box/n_5/grasp_0_RightTip_approach:
+                {}
+              manipulation/white_box/n_5/grasp_0_RightTip_leave:
+                {}
+            manipulation/white_box/n_5/grasp_1_RightTip:
+              manipulation/white_box/n_5/grasp_1_RightTip_approach:
+                {}
+              manipulation/white_box/n_5/grasp_1_RightTip_leave:
+                {}
+          origin_human14dof:
+            fake:
+              fake2:
+                Pelvis:
+                  Bellyf1:
+                    Bellyf2:
+                      Belly:
+                        Chest:
+                          LeftUpperArm_f1:
+                            LeftUpperArm_f2:
+                              LeftUpperArm:
+                                LeftForeArm_f1:
+                                  LeftForeArm:
+                                    LeftHand:
+                                      {}
+                          Neck:
+                            Head:
+                              {}
+                          RightUpperArm_f1:
+                            RightUpperArm_f2:
+                              RightUpperArm:
+                                RightForeArm_f1:
+                                  RightForeArm:
+                                    RightWristX:
+                                      RightWristY:
+                                        RightHand:
+                                          RightTip:
+                                            {}
+          shopdesk:
+            robot_desk1:
+              robot_desk1_approach:
+                {}
+              robot_desk1_leave:
+                {}
+            robot_desk2:
+              robot_desk2_approach:
+                {}
+              robot_desk2_leave:
+                {}
+            robot_desk3:
+              robot_desk3_approach:
+                {}
+              robot_desk3_leave:
+                {}
+            robot_desk4:
+              robot_desk4_approach:
+                {}
+              robot_desk4_leave:
+                {}
+          tabletop:
+            human_desk:
+              human_desk_approach:
+                {}
+              human_desk_leave:
+                {}
+            table:
+              {}
+          ur5_away:
+            ur5_away_approach:
+              {}
+            ur5_away_leave:
+              {}
+          ur5_home:
+            ur5_home_approach:
+              {}
+            ur5_home_leave:
+              {}
+          vertice_1:
+            {}
+          wall1:
+            {}
+          wall2:
+            {}
+          wall3:
+            {}
+      Update Interval: 0
+      Value: true
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: true
+      Name: Static Transform Publisher
+      Value: true
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: -1.2000000476837158
+        Y: 0
+        Z: 0
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: true
+      Name: Static Transform Publisher
+      Value: true
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: 2.200000047683716
+        Y: 0
+        Z: 0
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: true
+      Name: Static Transform Publisher
+      Value: true
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: -1.2000000476837158
+        Y: 0.6000000238418579
+        Z: 0
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: false
+      Name: Static Transform Publisher
+      Value: false
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: 2.200000047683716
+        Y: 0.6000000238418579
+        Z: 0
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: false
+      Name: Static Transform Publisher
+      Value: false
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: 1.100000023841858
+        Y: 0.30000001192092896
+        Z: 1
+    - Class: agni_tf_tools/Static Transform Publisher
+      Enabled: false
+      Name: Static Transform Publisher
+      Value: false
+      adapt transformation: false
+      marker type:
+        Value: interactive frame
+        marker scale: 0.20000000298023224
+      parent frame: <Fixed Frame>
+      publish transform:
+        Value: true
+        child frame: vertice_1
+      rotation:
+        axes: rpy
+        e1: 0
+        e2: 0
+        e3: 0
+      translation:
+        X: 0.5
+        Y: 0.30000001192092896
+        Z: 1
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+  Value: true
+  Views:
+    Current:
+      Class: rviz/XYOrbit
+      Distance: 9.902569770812988
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 0.33597859740257263
+        Y: 0.1259945034980774
+        Z: 5.215412102188566e-07
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7747985124588013
+      Target Frame: world
+      Yaw: 2.9318201541900635
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1043
+  Help:
+    collapsed: false
+  Hide Left Dock: false
+  Hide Right Dock: false
+  MotionPlanning:
+    collapsed: false
+  MotionPlanning - Trajectory Slider:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000100000000000002a2000003b9fc0200000007fb000000100044006900730070006c006100790073010000003d00000208000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a0056006900650077007300000003b0000000b0000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000001600000016fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e0067010000024b000001ab0000017d00ffffff000004d8000003b900000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 1920
+  Y: 0
