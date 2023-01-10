@@ -10,7 +10,11 @@
 <arg     if="$(arg debug)" name="launch_prefix"
  value="gdb --ex run --args" />
 
+ <!-- <param name="/use_sim_time" value="true" />
+ <node name="sim_time_publisher" pkg="hrc_simulator_configurations" type="pub_time.py"  output="screen" /> -->
+
 <include file="$(find hrc_simulator_descriptions)/launch/upload.launch"/>
+
 
 <!--Load configurations-->
 <rosparam command="load" file="$(find hrc_simulator_configurations)/config/controllers_configurations.yaml" />
@@ -105,5 +109,6 @@
   <arg name="debug" value="$(arg debug)"/>
 </include>
 
+<!---             SIMULATION ROS TIME PUBLISHER                               -->
 
 </launch>
