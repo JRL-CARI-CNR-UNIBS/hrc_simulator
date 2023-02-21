@@ -1,5 +1,9 @@
 agents:
-  robot: 
+  robot:
     - motion
-  human: 
+  human:
     - human
+
+agents_group_names:
+  motion: ur5_on_guide
+  human: human_right_arm

@@ -4,15 +4,17 @@
 # coll_risk_name: "dummy_risks"
 # coll_duration_name: "dummy_durations"
 
+# mongo_database: "agents_synergy"
+# mongo_collection_tasks: "tasks_properties_test"
+# mongo_collection_results: "sinergy_results_test_long_4video"
+#
+# coll_risk_name: "dynamics_long_test_outliers_3"
+# coll_duration_name: durations_long
 
-mongo_database: "agents_synergy"
-mongo_collection_tasks: "tasks_properties_test"
-#"tasks_properties"
-mongo_collection_results: "sinergy_results_test_long_4video"
-#"sinergy_results"
 
-coll_risk_name: "dynamics_long_test_outliers_3"
-#"sinergy_risks"
-coll_duration_name: durations_long
-#"sinergy_durations_4video"
-#"sinergy_durations"
+mongo_database: "milp_task_planner"
+mongo_collection_tasks: "task_properties"
+mongo_collection_results: "task_results"
+
+coll_duration_name: "task_durations"
+coll_risk_name: "task_synergies"
