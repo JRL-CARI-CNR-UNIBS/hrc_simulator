@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "626fd281baab6d0e016fa574"
+  },
+  "name": "pick_blue_box",
+  "type": "pick",
+  "description": "",
+  "agent": [
+    "ur5_on_guide",
+    "human_right_arm"
+  ],
+  "goal": [
+    "blue_box"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd281baab6d0e016fa575"
+  },
+  "name": "place_blue_box_ur5_on_guide",
+  "type": "place",
+  "description": "",
+  "agent": [
+    "ur5_on_guide"
+  ],
+  "goal": [
+    "robot_group"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd281baab6d0e016fa576"
+  },
+  "name": "place_blue_box_human_right_arm",
+  "type": "place",
+  "description": "",
+  "agent": [
+    "human_right_arm"
+  ],
+  "goal": [
+    "human_group"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd282baab6d0e016fa577"
+  },
+  "name": "pick_orange_box",
+  "type": "pick",
+  "description": "",
+  "agent": [
+    "ur5_on_guide"
+  ],
+  "goal": [
+    "orange_box"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd282baab6d0e016fa578"
+  },
+  "name": "place_orange_box",
+  "type": "place",
+  "description": "",
+  "agent": [
+    "ur5_on_guide"
+  ],
+  "goal": [
+    "robot_group"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd282baab6d0e016fa579"
+  },
+  "name": "pick_white_box",
+  "type": "pick",
+  "description": "",
+  "agent": [
+    "human_right_arm"
+  ],
+  "goal": [
+    "white_box"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd282baab6d0e016fa57a"
+  },
+  "name": "place_white_box",
+  "type": "place",
+  "description": "",
+  "agent": [
+    "human_right_arm"
+  ],
+  "goal": [
+    "human_group"
+  ]
+},{
+  "_id": {
+    "$oid": "626fd332f63b2cfde7a2a325"
+  },
+  "name": "end",
+  "type": "goto",
+  "description": "",
+  "agent": [
+    "ur5_on_guide",
+    "human_right_arm"
+  ],
+  "goal": [
+    "ur5_home",
+    "human_home"
+  ]
+}]
