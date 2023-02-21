@@ -9,21 +9,17 @@
   <arg name="hrc" default="false"/>
   <arg name="starting_recipe" default="0"/>
 
-  <arg name="mongo_database" default="test_mosaic"/>
-  <arg name="mongo_collection_tasks" default="tasks_properties"/>
-  <arg name="mongo_collection_results" default="tasks_results"/>
 
   <param name="starting_recipe_number" value="$(arg starting_recipe)"/>
 
   <!-- <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_mosaic_full.yaml" /> -->
-  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_4x4.yaml" />
+  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_3x3.yaml" />
   <param name="recipe" value="$(arg recipe)" />
 
-  <!-- If recipe_path is set, all the recipes in folder "recipe_path" are executed (only if platinum=false, see below) -->
+  <arg name="recipe_name" default="recipe" />
+  <param name="recipe_name" value="$(arg recipe_name)" />
 
-  <param name="mongo_database" value="$(arg mongo_database)"/>
-  <param name="mongo_collection_tasks" value="$(arg mongo_collection_tasks)"/>
-  <param name="mongo_collection_results" value="$(arg mongo_collection_results)"/>
+  <!-- If recipe_path is set, all the recipes in folder "recipe_path" are executed (only if platinum=false, see below) -->
 
   <!--<arg name="recipe_path" default="$(find task_planner_interface)/plans/multi-obj/v4/" />
   <param name="recipe_path" value="$(arg recipe_path)" /> -->
@@ -39,7 +35,12 @@
   <arg name="robot_feedback_to_planner" value="/sharework/test/stiima/motion/feedback" />
   <arg name="human_feedback_to_planner" value="/sharework/test/stiima/human/feedback" />
 
-  <node name="$(arg robot_node)" pkg="task_planner_interface" type="robot_node"  output="screen" >
+  <!-- Load parameter about agents involved -->
+  <rosparam if="$(arg hrc)" command="load" file="$(find hrc_simulator_configurations)/config/multiple_agents.yaml" />
+  <rosparam unless="$(arg hrc)"  command="load" file="$(find hrc_simulator_configurations)/config/single_agents.yaml" />
+  <!--  -->
+
+  <node name="$(arg robot_node)" pkg="task_planner_interface" type="robot_node"  output="screen">
     <param name="topic_request_from_planner" value="$(arg robot_request_from_planner)" />
     <param name="topic_feedback_to_planner" value="$(arg robot_feedback_to_planner)" />
     <param name="group_name" value="$(arg group_name_robot)" />
@@ -75,5 +76,23 @@
   <node if="$(arg hrc)" name="syncronization_node" pkg="task_planner_interface" type="syncronization_node"  output="screen" >
     <param name="number_of_agents" value="2"/>
   </node>
+
+<!-- DB UPDATE NODE -->
+  <arg name="mongo_database" default="sharework"/>
+  <arg name="mongo_collection_tasks" default="hrc_task_properties"/>
+  <arg name="mongo_collection_results" default="results_test"/>
+  <arg name="coll_risk_name" default="hrc_dynamic_risks"/>
+  <arg name="coll_duration_name" default="hrc_task_durations"/>
+
+  <node name="mongo_handler" pkg="task_planner_interface" type="mongoHandler.py"  output="screen" >
+    <param name="db_name" type="string" value="$(arg mongo_database)"/>
+    <param name="coll_properties_name" type="string" value="$(arg mongo_collection_tasks)"/>
+    <param name="coll_results_name" type="string" value="$(arg mongo_collection_results)"/>
+    <param name="coll_risk_name" type="string" value="$(arg coll_risk_name)"/>
+    <param name="coll_duration_name" type="string" value="$(arg coll_duration_name)"/>
+  </node>
+
+
+
 
 </launch>

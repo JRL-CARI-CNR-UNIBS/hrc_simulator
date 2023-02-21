@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="group_name_robot" default="ur5_on_guide"/>
+  <arg name="group_name_human" default="human_right_arm"/>
+
+  <arg name="platinum" default="false"/>
+  <arg name="hrc" default="false"/>
+  <arg name="starting_recipe" default="0"/>
+
+
+  <param name="starting_recipe_number" value="$(arg starting_recipe)"/>
+
+  <!-- <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_baseline_mosaic_full.yaml" /> -->
+  <arg name="recipe" value="$(find hrc_mosaic_task_planning_interface)/plans/comparison_for_review_tcybernetics/recipe_proposed_method_3x3.yaml" />
+  <param name="recipe" value="$(arg recipe)" />
+
+  <arg name="recipe_name" default="recipe" />
+  <param name="recipe_name" value="$(arg recipe_name)" />
+
+  <!-- If recipe_path is set, all the recipes in folder "recipe_path" are executed (only if platinum=false, see below) -->
+
+  <!--<arg name="recipe_path" default="$(find task_planner_interface)/plans/multi-obj/v4/" />
+  <param name="recipe_path" value="$(arg recipe_path)" /> -->
+
+  <param name="autosync" value="false" />
+  <param name="go_home_after_execution" value="false" />
+
+  <arg name="robot_node" value="robot_task_interface" />
+  <arg name="human_node" value="human_task_interface" />
+
+  <arg name="robot_request_from_planner" value="/sharework/test/stiima/motion" />
+  <arg name="human_request_from_planner" value="/sharework/test/stiima/human" />
+  <arg name="robot_feedback_to_planner" value="/sharework/test/stiima/motion/feedback" />
+  <arg name="human_feedback_to_planner" value="/sharework/test/stiima/human/feedback" />
+
+  <!-- Load parameter about agents involved -->
+  <rosparam if="$(arg hrc)" command="load" file="$(find hrc_simulator_configurations)/config/multiple_agents.yaml" />
+  <rosparam unless="$(arg hrc)"  command="load" file="$(find hrc_simulator_configurations)/config/single_agents.yaml" />
+  <!--  -->
+
+  <node name="$(arg robot_node)" pkg="task_planner_interface" type="robot_node"  output="screen">
+    <param name="topic_request_from_planner" value="$(arg robot_request_from_planner)" />
+    <param name="topic_feedback_to_planner" value="$(arg robot_feedback_to_planner)" />
+    <param name="group_name" value="$(arg group_name_robot)" />
+    <param name="home_position" value="ur5_home" />
+    <param name="retry_position" value="ur5_away" />
+  </node>
+
+
+
+
+
+</launch>
