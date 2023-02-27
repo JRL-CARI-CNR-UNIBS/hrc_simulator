@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <launch>
 
-  <rosparam file="$(find hrc_simulator_safety)/config/area_safety_config.yaml" command="load"/>
+<rosparam file="$(find hrc_simulator_safety)/config/area_safety_config.yaml" command="load"/>
 
-<node pkg="fixed_areas_ssm" type="fixed_areas_ssm_node" name="safety" output="screen">
+<node pkg="fixed_areas_ssm" type="fixed_areas_ssm_node" name="safety_area" output="screen">
 </node>
 
-<node pkg="fake_people_detection" name="fake_people_detection" type="node" output="screen">
+<node pkg="fake_people_detection" name="fake_people_detection_area" type="node" output="screen">
 </node>
 <rosparam file="$(find hrc_simulator_safety)/config/fake_people_detection.yaml" command="load"/>
 
