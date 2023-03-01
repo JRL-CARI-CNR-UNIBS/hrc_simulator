@@ -1,6 +1,6 @@
 # Solver Selection #
 optimization:
-  type: base
+  type: human_aware
   behaviour: continous
   objective: makespan
   n_recipe: 10
