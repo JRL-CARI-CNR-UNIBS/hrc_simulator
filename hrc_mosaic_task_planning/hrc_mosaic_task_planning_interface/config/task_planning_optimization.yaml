@@ -1,12 +1,14 @@
 # Solver Selection #
 optimization:
-  type: human_aware
+  type: base
   behaviour: continous
   objective: makespan
-  n_recipe: 10
+  n_recipe: 50
+
+  brute_force: false
 
 execution:
-  repetitions: 30
+  repetitions: 10
   n_recipe: 1
 
 # Problem Info #
