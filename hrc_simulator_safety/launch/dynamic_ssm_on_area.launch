@@ -8,6 +8,6 @@
 
 <node pkg="fake_people_detection" name="fake_people_detection_area" type="node" output="screen">
 </node>
-<rosparam file="$(find hrc_simulator_safety)/config/fake_people_detection.yaml" command="load"/>
+<!-- <rosparam file="$(find hrc_simulator_safety)/config/fake_people_detection.yaml" command="load"/> -->
 
 </launch>

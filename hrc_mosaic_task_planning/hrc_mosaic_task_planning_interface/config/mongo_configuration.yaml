@@ -12,10 +12,46 @@
 # coll_duration_name: durations_long
 
 
-mongo_database: "milp_task_planner"
-mongo_collection_tasks: "task_properties"
-mongo_collection_results: "task_results"
+# # ### Stavo usando questi
+# mongo_database: "milp_task_planner"
+# mongo_collection_tasks: "task_properties"
+# # mongo_collection_results: "task_results"
+# mongo_collection_results: "task_results_areas"
+#
+# coll_duration_name: "task_durations"
+# coll_risk_name: "task_synergies_bayesian"
+# # coll_risk_name: "task_synergies"
+# # ### Fino qui usando questi
 
+# ------------------------------------------------------
+## SAFETY AREAS BOTH AGENTS
+mongo_database: "safety_areas"
+mongo_collection_tasks: "task_properties"
+# mongo_collection_results: "task_results"
+# mongo_collection_results: "task_results_ha"
+# mongo_collection_results: "task_results_scaling"
+mongo_collection_results: "task_results_learning_phase"
 coll_duration_name: "task_durations"
-coll_risk_name: "task_synergies_bayesian"
 # coll_risk_name: "task_synergies"
+coll_risk_name: "task_synergies_bayesian"
+# ---------------------------------------------------------
+
+# ## WORKSTATION COMPARISON
+# mongo_database: "workstation_comparison"
+# mongo_collection_tasks: "task_properties"
+# # mongo_collection_results: "task_results"
+# mongo_collection_results: "task_results"
+#
+# coll_duration_name: "task_durations"
+# # coll_risk_name: "task_synergies"
+# coll_risk_name: "task_synergies_bayesian"
+
+# ------------------------------------------------------
+## VELOCITY SCALING
+# mongo_database: "velocity_scaling"
+# mongo_collection_tasks: "task_properties"
+# mongo_collection_results: "task_results_scaling"
+# coll_duration_name: "task_durations"
+# # coll_risk_name: "task_synergies"
+# coll_risk_name: "task_synergies_bayesian"
+# ---------------------------------------------------------

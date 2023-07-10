@@ -1,0 +1,18 @@
+neighboring_tasks_pairs:
+  - [pick_blue_box_1, pick_blue_box_3]
+  - [pick_blue_box_1, pick_blue_box_4]
+  - [pick_blue_box_2, pick_blue_box_3]
+  - [pick_blue_box_2, pick_blue_box_4]
+  - [pick_blue_box_1, place_blue_box_3]
+  - [pick_blue_box_1, place_blue_box_4]
+  - [pick_blue_box_2, place_blue_box_3]
+  - [pick_blue_box_2, place_blue_box_4]
+  - [pick_blue_box_3, place_blue_box_1]
+  - [pick_blue_box_3, place_blue_box_2]
+  - [pick_blue_box_4, place_blue_box_1]
+  - [pick_blue_box_4, place_blue_box_2]
+
+  # - [pick_blue_box_1, pick_blue_box_3]
+  # - [pick_blue_box_1, pick_blue_box_4]
+  # - [pick_blue_box_2, pick_blue_box_3]
+  # - [pick_blue_box_2, pick_blue_box_4]

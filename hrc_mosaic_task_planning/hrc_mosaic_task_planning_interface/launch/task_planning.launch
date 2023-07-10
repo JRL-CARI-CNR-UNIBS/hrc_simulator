@@ -7,16 +7,18 @@
   <arg name="dispatch_plan" default="true" />
   <arg name="save_result" default="true" />
 
-
+  <arg name="acquire_distance" default="false" />
+  <param name="acquire_distance" value="$(arg acquire_distance)" />
 
 
   <node name="task_planner_node" pkg="task_planner" type="main.py"  output="screen" >
     <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/task_goal_example.yaml" />
     <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/task_planning_optimization.yaml" />
+    <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/neighboring_tasks.yaml" />
 
     <param name="dispatch_plan" value="$(arg dispatch_plan)" />
     <param name="save_result" value="$(arg save_result)" />
-    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/recipe_solution.yaml" />
+    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/test_old_scaling/" />
 
     <!-- <rosparam command="load" file="$(find task_planner)/config/task_planning_optimization.yaml" ns="optimization_parameters/"/> -->
   </node>

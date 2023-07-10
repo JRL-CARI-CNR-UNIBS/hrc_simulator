@@ -7,7 +7,7 @@
 
 
   <node name="task_planner_statistics_node" pkg="task_planner_statistics" type="mongoStatistics.py"  output="screen" >
-    <param name="fig_folder_path" value="$(find task_planner_statistics)/file/" />
+    <param name="fig_folder_path" value="$(find task_planner_statistics)/file/safety_areas/" />
       <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/mongo_configuration.yaml" />
   </node>
 
