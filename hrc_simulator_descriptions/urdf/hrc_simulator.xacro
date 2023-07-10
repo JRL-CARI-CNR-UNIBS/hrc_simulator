@@ -92,7 +92,7 @@
 <joint name="tabletop_fixed" type="fixed">
   <parent link = "world" />
   <child  link = "tabletop" />
-  <origin xyz="1.73 1.72 1.04" rpy="0 0 ${-0.5*pi}" />
+  <origin xyz="-0.3 2.8 1.04" rpy="0 0 ${-0.0*pi}" />
 </joint>
 
 <link name="floor">
