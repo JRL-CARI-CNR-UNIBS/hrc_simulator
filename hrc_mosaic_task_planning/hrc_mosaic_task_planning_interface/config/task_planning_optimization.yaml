@@ -1,8 +1,8 @@
 # Solver Selection #
 optimization:
-  # type: human_aware_easier
+  type: human_aware_easier
   # type: areas
-  type: base
+  # type: base
   # type: human_aware_easier
   # type: human_aware_complete
   # type: human_aware_easier_abs
@@ -14,12 +14,12 @@ optimization:
   # type: test
   behaviour: continous
   objective: makespan
-  n_recipe: 50
+  n_recipe: 1
 
   brute_force: false
 
 execution:
-  repetitions: 50
+  repetitions: 30
   n_recipe: 1
 
 

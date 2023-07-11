@@ -1,0 +1,64 @@
+pick_orange_box_1:
+  t_start: 0.030997508764079917
+  t_end: 7.342950644492916
+  agent: ur5_on_guide
+pick_orange_box_2:
+  t_start: 27.642216703891414
+  t_end: 34.95416983962025
+  agent: ur5_on_guide
+pick_blue_box_1:
+  t_start: -1.8740564655672642e-13
+  t_end: 7.342950644492916
+  agent: human_right_arm
+pick_blue_box_2:
+  t_start: 27.611219195128147
+  t_end: 34.95416983962125
+  agent: human_right_arm
+pick_blue_box_3:
+  t_start: 42.35253415226895
+  t_end: 49.94688768506009
+  agent: ur5_on_guide
+pick_blue_box_4:
+  t_start: 14.74131495714162
+  t_end: 22.335668489932758
+  agent: ur5_on_guide
+pick_white_box_1:
+  t_start: 38.88601376891208
+  t_end: 46.93955794096065
+  agent: human_right_arm
+pick_white_box_2:
+  t_start: 11.274794573783744
+  t_end: 19.328338745832312
+  agent: human_right_arm
+place_orange_box_1:
+  t_start: 7.342950644492916
+  t_end: 14.74131495714169
+  agent: ur5_on_guide
+place_orange_box_2:
+  t_start: 34.95416983962025
+  t_end: 42.35253415226902
+  agent: ur5_on_guide
+place_blue_box_1:
+  t_start: 7.342950644492916
+  t_end: 11.274794573783687
+  agent: human_right_arm
+place_blue_box_2:
+  t_start: 34.95416983962125
+  t_end: 38.88601376891202
+  agent: human_right_arm
+place_blue_box_3:
+  t_start: 49.94688768506009
+  t_end: 55.25343589901883
+  agent: ur5_on_guide
+place_blue_box_4:
+  t_start: 22.335668489932758
+  t_end: 27.6422167038915
+  agent: ur5_on_guide
+place_white_box_1:
+  t_start: 46.93955794096065
+  t_end: 52.84310313224864
+  agent: human_right_arm
+place_white_box_2:
+  t_start: 19.328338745832312
+  t_end: 25.23188393712031
+  agent: human_right_arm

@@ -12,13 +12,13 @@
 
 
   <node name="task_planner_node" pkg="task_planner" type="main.py"  output="screen" >
-    <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/task_goal_example.yaml" />
+    <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/task_goal_example_2.yaml" />
     <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/task_planning_optimization.yaml" />
     <rosparam command="load" file="$(find hrc_mosaic_task_planning_interface)/config/neighboring_tasks.yaml" />
 
     <param name="dispatch_plan" value="$(arg dispatch_plan)" />
     <param name="save_result" value="$(arg save_result)" />
-    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/test_old_scaling/" />
+    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/online_phase/" />
 
     <!-- <rosparam command="load" file="$(find task_planner)/config/task_planning_optimization.yaml" ns="optimization_parameters/"/> -->
   </node>
