@@ -24,16 +24,16 @@
 # # ### Fino qui usando questi
 
 # ------------------------------------------------------
-## SAFETY AREAS BOTH AGENTS
-mongo_database: "safety_areas"
-mongo_collection_tasks: "task_properties"
-# mongo_collection_results: "task_results"
-# mongo_collection_results: "task_results_ha"
-# mongo_collection_results: "task_results_scaling"
-mongo_collection_results: "task_results_learning_phase"
-coll_duration_name: "task_durations"
-# coll_risk_name: "task_synergies"
-coll_risk_name: "task_synergies_bayesian"
+# ## SAFETY AREAS BOTH AGENTS
+# mongo_database: "safety_areas"
+# mongo_collection_tasks: "task_properties"
+# # mongo_collection_results: "task_results"
+# # mongo_collection_results: "task_results_ha"
+# # mongo_collection_results: "task_results_scaling"
+# mongo_collection_results: "test"
+# coll_duration_name: "task_durations"
+# # coll_risk_name: "task_synergies"
+# coll_risk_name: "task_synergies_bayesian"
 # ---------------------------------------------------------
 
 # ## WORKSTATION COMPARISON
@@ -55,3 +55,11 @@ coll_risk_name: "task_synergies_bayesian"
 # # coll_risk_name: "task_synergies"
 # coll_risk_name: "task_synergies_bayesian"
 # ---------------------------------------------------------
+
+
+## NEW SAFETY AREAS BOTH AGENTS
+mongo_database: "new_safety_areas"
+mongo_collection_tasks: "task_properties"
+mongo_collection_results: "task_results_final_version"
+coll_duration_name: "new_task_durations"
+coll_risk_name: "task_synergies_bayesian_mean"

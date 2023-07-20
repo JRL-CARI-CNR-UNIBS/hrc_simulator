@@ -4,7 +4,7 @@
   <arg name="test_name" default="test"/>
 
   <node name="distance_monitoring_node" pkg="task_planner_statistics" type="distance_monitoring.py"  output="screen" >
-    <param name="distance_monitoring_path" value="$(find hrc_mosaic_task_planning_interface)/statistics/" />
+    <param name="distance_monitoring_path" value="$(find hrc_mosaic_task_planning_interface)/statistics/new_safety_areas" />
     <param name="test_name" value="$(arg test_name)" />
 
   </node>

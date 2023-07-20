@@ -1,10 +1,12 @@
 # Solver Selection #
 optimization:
   # type: human_aware_easier
+  mip_gap: 0.085
+  # mip_gap: 0.01 # mip gap for easier tp
   # type: areas
-  type: base
+  # type: base
   # type: human_aware_easier
-  # type: human_aware_complete
+  type: human_aware_complete
   # type: human_aware_easier_abs
 
   # type: human_aware_complete
@@ -14,7 +16,7 @@ optimization:
   # type: test
   behaviour: continous
   objective: makespan
-  n_recipe: 50
+  n_recipe: 1
 
   brute_force: false
 

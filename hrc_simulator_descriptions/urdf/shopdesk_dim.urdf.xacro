@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
- 
+
   <xacro:macro name="shopdesk">
 
 
-  
+
   <link name="shopdesk">
     <visual>
       <origin xyz="0 0 -0.5" rpy="0 0 0" />
       <geometry>
-        <box size="2 0.8 1.0"/>
+        <box size="1 0.8 1.0"/>
       </geometry>
       <material name="sabbia">
         <color rgba="0.7765	0.651	0.392156862745098 1.0"/>
@@ -26,14 +26,14 @@
     <collision>
       <origin xyz="0 0 -0.8" rpy="0 0 0" />
       <geometry>
-        <box size="2.04 0.84 1.6"/>
+        <box size="1.04 0.84 1.6"/>
       </geometry>
       <material name="sabbia">
         <color rgba="0.7765	0.651	0.392156862745098 1.0"/>
       </material>
     </collision>
   </link>
-  
+
 
 
 

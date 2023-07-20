@@ -1,3 +1,46 @@
+# ssm:
+#   override_increase_speed: 10 # [%/s]
+#   override_decrease_speed: 100 # [%/s]
+#   areas:
+#   - name: "area0"
+#     override: 50
+#     corners:
+#     - [-1.2,0]
+#     - [-1.2,0.6]
+#     - [0.5,0.6]
+#     - [0.5,0]
+#   - name: "area1"
+#     override: 50
+#     corners:
+#     - [1.1,0.05]
+#     - [1.1,0.6]
+#     - [2.2,0.6]
+#     - [2.2,0.05]
+#   # - name: "area1"
+#   #   override: 30
+#   #   corners:
+#   #   - [0,0]
+#   #   - [0,1.5]
+#   #   - [1.8,1.5]
+#   #   - [1.8,0]
+#
+#   - name: "stop_area"
+#     override: 0
+#     corners:
+#     - [0.5,0.0]
+#     - [0.5,0.6]
+#     - [1.1,0.6]
+#     - [1.1,0.0]
+#
+# both_agent_checking: true
+# base_frame: "world"
+# tool_frame: "tip"
+# links_test:
+# - tip
+# - ur5_tool0
+# - ur5_wrist_3_link
+# - ur5_wrist_2_link
+# - ur5_wrist_1_link
 ssm:
   override_increase_speed: 10 # [%/s]
   override_decrease_speed: 100 # [%/s]
@@ -5,17 +48,17 @@ ssm:
   - name: "area0"
     override: 50
     corners:
-    - [-1.2,0]
-    - [-1.2,0.6]
-    - [0.5,0.6]
-    - [0.5,0]
+    - [-1.0,0]
+    - [-1.0,0.6]
+    - [0.6,0.6]
+    - [0.6,0]
   - name: "area1"
     override: 50
     corners:
-    - [1.1,0.05]
-    - [1.1,0.6]
+    - [1.2,0.0]
+    - [1.2,0.6]
     - [2.2,0.6]
-    - [2.2,0.05]
+    - [2.2,0.0]
   # - name: "area1"
   #   override: 30
   #   corners:
@@ -27,10 +70,10 @@ ssm:
   - name: "stop_area"
     override: 0
     corners:
-    - [0.5,0.0]
-    - [0.5,0.6]
-    - [1.1,0.6]
-    - [1.1,0.0]
+    - [0.6,0.0]
+    - [0.6,0.6]
+    - [1.2,0.6]
+    - [1.2,0.0]
 
 both_agent_checking: true
 base_frame: "world"

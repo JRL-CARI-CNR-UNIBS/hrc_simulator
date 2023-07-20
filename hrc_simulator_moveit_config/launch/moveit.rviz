@@ -7,6 +7,7 @@ Panels:
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
+        - /Marker1
       Splitter Ratio: 0.46881288290023804
     Tree Height: 808
   - Class: rviz/Help
@@ -805,6 +806,29 @@ Visualization Manager:
       top: 800
       update interval: 0.03999999910593033
       width: 128
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /areas_plot
+      Name: Marker
+      Namespaces:
+        area_plot: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/TF
+      Enabled: false
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -821,7 +845,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 5.904229640960693
+      Distance: 5.139726638793945
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -829,17 +853,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.5039342641830444
-        Y: 0.6427788734436035
-        Z: -7.301563300643465e-07
+        X: 0.6983864903450012
+        Y: 0.6357406377792358
+        Z: 1.6540293472644407e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5947969555854797
+      Pitch: 1.4947963953018188
       Target Frame: world
-      Yaw: 2.271775245666504
+      Yaw: 1.5867897272109985
     Saved: ~
 Window Geometry:
   Displays:

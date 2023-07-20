@@ -33,7 +33,7 @@
 <joint name="human_fixed_joint" type="fixed">
   <parent link="world" />
   <child  link = "origin_human14dof" />
-  <origin xyz="1 1 0.0" rpy="0 0 ${-0.5*pi}" />
+  <origin xyz="1.5 1.2 0.0" rpy="0 0 ${-0.5*pi}" />
 </joint>
 
 
@@ -79,20 +79,20 @@
 <joint name="shopdesk_fixed" type="fixed">
   <parent link = "world" />
   <child  link = "shopdesk" />
-<origin xyz="1 -0.95 0.94" rpy="0.0 0.0 ${-0.0*pi}" />
+<origin xyz="2.1 -1.0 0.94" rpy="0.0 0.0 ${-0.0*pi}" />
 </joint>
 
 <joint name="elmo_linear_guide_fixed" type="fixed">
   <parent link = "world" />
   <child  link = "elmo_linear_guide_stator" />
-  <origin xyz="0.090 -0.32 0.95" rpy="0 0 0.005" />
+  <origin xyz="0.5 -0.32 0.95" rpy="0 0 0.005" />
 </joint>
 
 
 <joint name="tabletop_fixed" type="fixed">
   <parent link = "world" />
   <child  link = "tabletop" />
-  <origin xyz="-0.3 2.8 1.04" rpy="0 0 ${-0.0*pi}" />
+  <origin xyz="-0.9 2.4 1.04" rpy="0 0 ${0.5*pi}" />
 </joint>
 
 <link name="floor">
@@ -151,7 +151,7 @@
 <joint name="wall3_joint" type="fixed">
   <parent link = "world" />
   <child  link = "wall3" />
-<origin xyz="-0.3 2 0" rpy="0 0 0.0" />
+<origin xyz="-1.4 2 0" rpy="0 0 0.0" />
 </joint>
 
 

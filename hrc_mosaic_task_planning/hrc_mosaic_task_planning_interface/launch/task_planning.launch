@@ -18,7 +18,7 @@
 
     <param name="dispatch_plan" value="$(arg dispatch_plan)" />
     <param name="save_result" value="$(arg save_result)" />
-    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/test_old_scaling/" />
+    <param name="result_file_path" value="$(find hrc_mosaic_task_planning_interface)/solutions/new_safety_areas/final_version/" />
 
     <!-- <rosparam command="load" file="$(find task_planner)/config/task_planning_optimization.yaml" ns="optimization_parameters/"/> -->
   </node>
